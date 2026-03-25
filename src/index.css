@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  [dir="rtl"] {
+  /*  font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif; */
+    font-family: 'Cairo', 'Tajawal', 'Almarai', sans-serif;
+  }
+
+  [dir="rtl"] body {
+    text-align: right;
+  }
+}
