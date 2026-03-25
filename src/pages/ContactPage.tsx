@@ -16,12 +16,10 @@ export default function ContactPage() {
   });
 
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
-    setErrorMessage('');
 
     try {
       const supabase = getSupabase();
@@ -54,7 +52,6 @@ export default function ContactPage() {
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
-      setErrorMessage('Failed to submit form. Please try again or contact me directly via email or phone.');
     }
   };
 
