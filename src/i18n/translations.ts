@@ -185,7 +185,7 @@ export const translations = {
         title: 'Our 4-Step Process',
         step1: {
           title: 'Initial Consultation',
-          description: 'We start with a free 10-minute call or meeting to understand your project, challenges, and what you need help with. This helps us assess scope and provide you with a clear proposal.',
+          description: 'We start with a free 60-minute call or meeting to understand your project, challenges, and what you need help with. This helps us assess scope and provide you with a clear proposal.',
           deliverable: 'Clear understanding of your needs and proposed scope of work',
         },
         step2: {
@@ -348,7 +348,7 @@ export const translations = {
         },
         step2: {
           title: 'We Schedule a Call',
-          description: 'We will have a free 10-minute consultation to discuss your needs in detail.',
+          description: 'We will have a free 60-minute consultation to discuss your needs in detail.',
         },
         step3: {
           title: 'You Get a Proposal',
@@ -548,7 +548,7 @@ export const translations = {
         title: 'عملنا مكون من 4 خطوات',
         step1: {
           title: 'الاستشارة الأولية',
-          description: 'نبدأ بمكالمة أو اجتماع مجاني عير الهواء لمدة 10 دقائق لفهم مشروعك والتحديات وما تحتاج اليه للمساعدة فيه. يساعدنا هذا في تقييم النطاق وتزويدك بمقترح واضح.',
+          description: 'نبدأ بمكالمة أو اجتماع مجاني عير الهواء لمدة 60 دقيقة لفهم مشروعك والتحديات وما تحتاج اليه للمساعدة فيه. يساعدنا هذا في تقييم النطاق وتزويدك بمقترح واضح.',
           deliverable: 'فهم واضح لاحتياجاتك ونطاق العمل المقترح',
         },
         step2: {
@@ -638,7 +638,7 @@ export const translations = {
       },
       cta: {
         title: 'هل أنت مستعد للعمل معًا؟',
-        subtitle: 'ابدأ باستشارة مجانية لمدة 10 دقائق لمناقشة مشروعك وكيف يمكننا مساعدتك.',
+        subtitle: 'ابدأ باستشارة مجانية لمدة 60 دقيقة لمناقشة مشروعك وكيف يمكننا مساعدتك.',
         button: 'احجز استشارتك المجانية',
       },
     },
@@ -698,7 +698,7 @@ export const translations = {
       response: {
         title: 'وقت الاستجابة',
         description: 'عادة نرد على جميع الاستفسارات خلال 24 ساعة (أيام العمل). بالنسبة للأمور العاجلة، يرجى الإشارة إلى ذلك في رسالتك.',
-        freeConsultation: 'استشارة مجانية لمدة 10 دقائق لجميع الاستفسارات الجديدة',
+        freeConsultation: 'استشارة مجانية لمدة 60 دقيقة لجميع الاستفسارات الجديدة',
       },
       directEmail: {
         title: 'تفضل إرسال بريد إلكتروني مباشر؟',
