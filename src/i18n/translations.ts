@@ -31,7 +31,7 @@ export const translations = {
       hero: {
         title: 'Specialist Construction Contracts & Project Advisory in UAE',
         subtitle: 'At BCX, we partner with UAE owners and developers to navigate the complexities of contract management. Led by seasoned Project Manager Esam Al Hammadi, our boutique approach focuses on unlocking value and minimizing risk at every stage of the project lifecycle, from private residential builds to high-rise developments.',
-        bookConsultation: 'Book a Free 10-Minute Consultation',
+        bookConsultation: 'Book a Free 60-Minute Consultation',
         sendContract: 'Send Your Contract for Review',
         credentials: 'Former Government & Semi-Government Expert · Achieved AED 837M in projects savings · Specialized in contract claims, tender evaluation and dispute avoidance',
       },
@@ -274,7 +274,7 @@ export const translations = {
       },
       cta: {
         title: 'Ready to Work Together?',
-        subtitle: 'Start with a free 10-minute consultation to discuss your project and how I can help.',
+        subtitle: 'Start with a free 60-minute consultation to discuss your project and how I can help.',
         button: 'Book Your Free Consultation',
       },
     },
@@ -394,7 +394,7 @@ export const translations = {
       hero: {
         title: 'متخصصون في عقود البناء واستشارات المشاريع',
         subtitle: 'نحن جهة استشارية متخصصة بقيادة المهندس ومدير المشاريع عصام الحمادي، نساعد الملاك والمطورين في الإمارات على مراجعة العقود والسيطرة على المخاطر وتحقيق وفورات مالية في تكاليف المشاريع ابتداءً من الفلل الخاصة إلى المباني الشاهقة.',
-        bookConsultation: 'احجز استشارة مجانية لمدة 10 دقائق',
+        bookConsultation: 'احجز استشارة مجانية لمدة 60 دقيقة',
         sendContract: 'أرسل عقدك للمراجعة',
         credentials: 'خبير سابق في القطاعين الحكومي وشبه الحكومي ·  قاد عدة مشاريع وحقق توفير يقارب 837 مليون درهم للملاك· متخصص في مطالبات العقود وتقييم المناقصات وتجنب النزاعات',
       },
