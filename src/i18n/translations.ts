@@ -334,7 +334,7 @@ export const translations = {
       response: {
         title: 'Response Time',
         description: 'We typically respond to all inquiries within 24 hours (business days). For urgent matters, please indicate this in your message.',
-        freeConsultation: 'Free 10-minute consultation for all new inquiries',
+        freeConsultation: 'Free 60-minute consultation for all new inquiries',
       },
       directEmail: {
         title: 'Prefer to Email Directly?',
