@@ -1,13 +1,14 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin, Languages } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import FloatingReviewButton from './FloatingReviewButton';
+import LanguageToggle from './LanguageToggle';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { language, setLanguage, t, dir } = useLanguage();
+  const { t, dir } = useLanguage();
 
   const navigation = [
     { name: t.nav.home, href: '/' },
@@ -35,7 +36,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span className="hidden sm:block text-slate-700 font-medium">Building Contract Expert</span>
             </Link>
 
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-4">
               {navigation.map((item) => (
                 <Link
                   key={item.href}
@@ -50,25 +51,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </Link>
               ))}
 
-              <button
-                onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-                className="ml-2 p-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors flex items-center space-x-1"
-                title={language === 'en' ? 'Switch to Arabic' : 'التبديل إلى الإنجليزية'}
-              >
-                <Languages size={18} />
-                <span className="text-xs font-medium">{language === 'en' ? 'AR' : 'EN'}</span>
-              </button>
+              <LanguageToggle />
             </div>
 
-            <div className="md:hidden flex items-center space-x-2">
-              <button
-                onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-                className="p-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors flex items-center space-x-1"
-                title={language === 'en' ? 'Switch to Arabic' : 'التبديل إلى الإنجليزية'}
-              >
-                <Languages size={20} />
-                <span className="text-xs font-medium">{language === 'en' ? 'AR' : 'EN'}</span>
-              </button>
+            <div className="md:hidden flex items-center space-x-3">
+              <LanguageToggle />
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded-md text-slate-600 hover:bg-slate-100"
