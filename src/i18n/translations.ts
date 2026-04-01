@@ -46,9 +46,9 @@ export const translations = {
           title: 'Protect Your Financial Position',
           description: 'We highlight payment risks, variation clauses, and cost-related issues to ensure your investment is fully protected.',
         },
-        projectManagement: {
-          title: 'Project & Contract Management Support',
-          description: 'Part-time or task-based project and contract management for owners, and developers who need independent, experienced support.',
+        PreventFutureDisputes: {
+          title: 'Prevent Future Disputes',
+          description: 'We help you avoid conflicts by ensuring the contract is clear, balanced, and aligned with your best interests.',
         },
         valueEngineering: {
           title: 'Value Engineering & Cost Optimization',
