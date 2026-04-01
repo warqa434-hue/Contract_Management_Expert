@@ -2,44 +2,44 @@ import { Link } from 'react-router-dom';
 import { FileText, Building2, ClipboardCheck, Scale, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
-export default function ServicesPage() {
+export default function HOWWEPROTECTYOUPage() {
   const { t, dir } = useLanguage();
 
-  const services = [
+  const HOWWEPROTECTYOU = [
     {
       icon: FileText,
       title: t.services.homeBuilders.title,
-      description: t.services.homeBuilders.description,
-      link: '/services/home-builders',
-      tags: t.services.homeBuilders.tags,
+      description: t.HOWWEPROTECTYOU.homeBuilders.description,
+      link: '/HOW-WE-PROTECT-YOU/home-builders',
+      tags: t.HOWWEPROTECTYOU.homeBuilders.tags,
     },
     {
       icon: Building2,
-      title: t.services.developers.title,
-      description: t.services.developers.description,
-      link: '/services/developers-smes',
-      tags: t.services.developers.tags,
+      title: t.HOWWEPROTECTYOU.developers.title,
+      description: t.HOWWEPROTECTYOU.developers.description,
+      link: '/HOW-WE-PROTECT-YOU/developers-smes',
+      tags: t.HOWWEPROTECTYOU.developers.tags,
     },
     {
       icon: ClipboardCheck,
-      title: t.services.projectManagement.title,
-      description: t.services.projectManagement.description,
-      link: '/services/project-management',
-      tags: t.services.projectManagement.tags,
+      title: t.HOWWEPROTECTYOU.projectManagement.title,
+      description: t.HOWWEPROTECTYOU.projectManagement.description,
+      link: '/HOW-WE-PROTECT-YOU/project-management',
+      tags: t.HOWWEPROTECTYOU.projectManagement.tags,
     },
     {
       icon: Scale,
-      title: t.services.valueEngineering.title,
-      description: t.services.valueEngineering.description,
-      link: '/services/value-engineering',
-      tags: t.services.valueEngineering.tags,
+      title: t.HOWWEPROTECTYOU.valueEngineering.title,
+      description: t.HOWWEPROTECTYOU.valueEngineering.description,
+      link: '/HOW-WE-PROTECT-YOU/value-engineering',
+      tags: t.HOWWEPROTECTYOU.valueEngineering.tags,
     },
     {
       icon: Scale,
-      title: t.services.claims.title,
-      description: t.services.claims.description,
-      link: '/services/claims-variations',
-      tags: t.services.claims.tags,
+      title: t.HOWWEPROTECTYOU.claims.title,
+      description: t.HOWWEPROTECTYOU.claims.description,
+      link: '/HOW-WE-PROTECT-YOU/claims-variations',
+      tags: t.HOWWEPROTECTYOU.claims.tags,
     },
   ];
 
