@@ -314,7 +314,7 @@ export const translations = {
           otherEmirates: 'Other Emirates',
           outsideUAE: 'Outside UAE',
         },
-        services: {
+        HOWWEPROTECTYOU: {
           select: 'Select a service...',
           contractReviewHome: 'Contract Review (Home/Villa)',
           contractReviewDeveloper: 'Contract Review (Developer/Commercial)',
@@ -366,7 +366,7 @@ export const translations = {
     nav: {
       home: 'الرئيسية',
       about: 'من نحن',
-      services: 'الخدمات',
+      HOWWEPROTECTYOU: 'كيف يمكننا توفير الحماية لك',
       portfolio: 'المشاريع',
       howWeWork: 'كيف نعمل',
       contact: 'اتصل بنا',
@@ -398,8 +398,8 @@ export const translations = {
         sendContract: 'أرسل عقدك للمراجعة',
         credentials: 'خبير سابق في القطاعين الحكومي وشبه الحكومي ·  قاد عدة مشاريع وحقق توفير يقارب 837 مليون درهم للملاك· متخصص في مطالبات العقود وتقييم المناقصات وتجنب النزاعات',
       },
-      services: {
-        title: 'الخدمات',
+      HOWWEPROTECTYOU: {
+        title: 'كيف يمكننا توفير الحماية لك',
         subtitle: 'خدمات متخصصة في العقود والمشاريع تتدرج من مشاريع الفلل الخاصة إلى المباني الشاهقة ',
         homeBuilders: {
           title: 'مراجعة العقود لأصحاب الفلل',
