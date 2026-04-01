@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const navigation = [
     { name: t.nav.home, href: '/' },
     { name: t.nav.about, href: '/about' },
-    { name: t.nav.services, href: '/services' },
+    { name: t.nav.HOWWEPROTECTYOU, href: '/HOW-WE-PROTECT-YOU' },
     { name: t.nav.portfolio, href: '/portfolio' },
     { name: t.nav.howWeWork, href: '/how-we-work' },
     { name: t.nav.contact, href: '/contact' },
