@@ -36,8 +36,8 @@ export const translations = {
         credentials: 'Former Government & Semi-Government Expert · Achieved AED 837M in projects savings · Specialized in contract claims, tender evaluation and dispute avoidance',
       },
       services: {
-        title: 'Services',
-        subtitle: 'Focused contract and project support services that scale from individual villa projects to complex high-rise developments',
+        title: 'HOW WE PROTECT YOU',
+        subtitle: 'Before you sign, we identify risks that could cost you time, money, and legal complications.',
         homeBuilders: {
           title: 'Contract Review for Home Builders',
           description: 'Helping home owners understand contract terms and conditions, specifications, risks, obligations and cost exposures before signing their contracts.',
