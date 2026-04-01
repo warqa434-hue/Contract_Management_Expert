@@ -3,7 +3,7 @@ export const translations = {
     nav: {
       home: 'Home',
       about: 'About',
-      services: 'Services',
+      services: 'HOW WE PROTECT YOU',
       portfolio: 'Portfolio',
       howWeWork: 'How We Work',
       contact: 'Contact',
