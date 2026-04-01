@@ -116,8 +116,8 @@ export const translations = {
         ],
       },
     },
-    services: {
-      title: 'Services',
+    HOWWEPROTECTYOU: {
+      title: 'HOW WE PROTECT YOU',
       subtitle: 'We provide independent, structured support across the full project and contract lifecycle – from pre-tender review and value engineering, through contract negotiation and administration, to claims management and dispute resolution. Our services scale from individual villa projects to multi-million-dirham high-rise and infrastructure portfolios, with every mandate led personally by Esam and supported when needed by specialist partners.',
       homeBuilders: {
         title: 'Contract Review for Home Builders & Individual Owners',
