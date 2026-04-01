@@ -35,8 +35,8 @@ export const translations = {
         sendContract: 'Send Your Contract for Review',
         credentials: 'Former Government & Semi-Government Expert · Achieved AED 837M in projects savings · Specialized in contract claims, tender evaluation and dispute avoidance',
       },
-      services: {
-        title: 'HOW WE PROTECT YOU',
+      HOW WE PROTECT YOU: {
+        title: 'How We Protect You',
         subtitle: 'Before you sign, we identify risks that could cost you time, money, and legal complications.',
         homeBuilders: {
           title: 'Contract Review for Home Builders',
