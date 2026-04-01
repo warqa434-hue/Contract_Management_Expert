@@ -54,6 +54,8 @@ export const translations = {
           title: 'Value Engineering & Cost Optimization',
           description: 'Proven track record of delivering 15–25% cost reductions through strategic contract restructuring, specification optimization and innovative sourcing.',
         },
+        sendContract: 'Get a Free Initial Assessment'
+        },
       },
       portfolio: {
         title: 'Trusted by Projects Across UAE',
