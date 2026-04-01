@@ -19,7 +19,7 @@ export const translations = {
       learnMore: 'Learn more',
       getStarted: 'Get Started Today',
       bookConsultation: 'Book a Free Consultation',
-      sendContract: 'Send Your Contract for Review',
+      sendContract: 'Get a Free Initial Assessment',
       contactUs: 'Get In Touch',
       viewServices: 'View All Services',
     },
