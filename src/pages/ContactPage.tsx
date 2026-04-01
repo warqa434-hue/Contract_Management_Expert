@@ -232,13 +232,13 @@ export default function ContactPage() {
                       required
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all bg-white"
                     >
-                      <option value="">{t.contact.form.services.select}</option>
-                      <option value="contract_review_home">{t.contact.form.services.contractReviewHome}</option>
-                      <option value="contract_review_developer">{t.contact.form.services.contractReviewDeveloper}</option>
-                      <option value="project_management">{t.contact.form.services.projectManagement}</option>
-                      <option value="value_engineering">{t.contact.form.services.valueEngineering}</option>
-                      <option value="claims_variations">{t.contact.form.services.claimsVariations}</option>
-                      <option value="consultation">{t.contact.form.services.consultation}</option>
+                      <option value="">{t.contact.form.HOWWEPROTECTYOU.select}</option>
+                      <option value="contract_review_home">{t.contact.form.HOWWEPROTECTYOU.contractReviewHome}</option>
+                      <option value="contract_review_developer">{t.contact.form.HOWWEPROTECTYOU.contractReviewDeveloper}</option>
+                      <option value="project_management">{t.contact.form.HOWWEPROTECTYOU.projectManagement}</option>
+                      <option value="value_engineering">{t.contact.form.HOWWEPROTECTYOU.valueEngineering}</option>
+                      <option value="claims_variations">{t.contact.form.HOWWEPROTECTYOU.claimsVariations}</option>
+                      <option value="consultation">{t.contact.form.HOWWEPROTECTYOU.consultation}</option>
                     </select>
                   </div>
 
