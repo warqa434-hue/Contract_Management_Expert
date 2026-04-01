@@ -38,13 +38,13 @@ export const translations = {
       HOW WE PROTECT YOU: {
         title: 'How We Protect You',
         subtitle: 'Before you sign, we identify risks that could cost you time, money, and legal complications.',
-        homeBuilders: {
-          title: 'Contract Review for Home Builders',
-          description: 'Helping home owners understand contract terms and conditions, specifications, risks, obligations and cost exposures before signing their contracts.',
+        IdentifyHiddenRisks: {
+          title: 'Identify Hidden Risks',
+          description: 'We review your contract to uncover unclear terms, unfair clauses, and hidden obligations that may expose you to financial loss.',
         },
-        developers: {
-          title: 'Contract & Tender Review for Developers',
-          description: 'Structured review of construction contracts, specifications, BOQ and tender documents to reduce variations, disputes and delays.',
+        ProtectYourFinancialPosition: {
+          title: 'Protect Your Financial Position',
+          description: 'We highlight payment risks, variation clauses, and cost-related issues to ensure your investment is fully protected.',
         },
         projectManagement: {
           title: 'Project & Contract Management Support',
