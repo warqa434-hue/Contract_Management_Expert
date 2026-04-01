@@ -209,7 +209,7 @@ export default function PortfolioPage() {
               <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} size={20} />
             </Link>
             <Link
-              to="/services"
+              to="/HOW WE PROTECT YOU"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-slate-700 rounded-lg hover:bg-slate-600 transition-all transform hover:scale-105 shadow-lg border border-slate-600"
             >
               {t.common.viewServices}
