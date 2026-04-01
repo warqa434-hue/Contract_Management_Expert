@@ -5,30 +5,30 @@ import { useLanguage } from '../contexts/LanguageContext';
 export default function HomePage() {
   const { t, dir } = useLanguage();
 
-  const services = [
+  const HOWWEPROTECTYOU = [
     {
       icon: FileText,
-      title: t.home.services.homeBuilders.title,
-      description: t.home.services.homeBuilders.description,
-      link: '/services/home-builders',
+      title: t.home.HOWWEPROTECTYOU.homeBuilders.title,
+      description: t.home.HOWWEPROTECTYOU.homeBuilders.description,
+      link: '/HOW WE PROTECT YOU/home-builders',
     },
     {
       icon: Building2,
-      title: t.home.services.developers.title,
-      description: t.home.services.developers.description,
-      link: '/services/developers-smes',
+      title: t.home.HOWWEPROTECTYOU.developers.title,
+      description: t.home.HOWWEPROTECTYOU.developers.description,
+      link: '/HOW WE PROTECT YOU/developers-smes',
     },
     {
       icon: ClipboardCheck,
-      title: t.home.services.projectManagement.title,
-      description: t.home.services.projectManagement.description,
-      link: '/services/project-management',
+      title: t.home.HOWWEPROTECTYOU.projectManagement.title,
+      description: t.home.HOWWEPROTECTYOU.projectManagement.description,
+      link: '/HOW WE PROTECT YOU/project-management',
     },
     {
       icon: Scale,
-      title: t.home.services.valueEngineering.title,
-      description: t.home.services.valueEngineering.description,
-      link: '/services/value-engineering',
+      title: t.home.HOWWEPROTECTYOU.valueEngineering.title,
+      description: t.home.HOWWEPROTECTYOU.valueEngineering.description,
+      link: '/HOW WE PROTECT YOU/value-engineering',
     },
   ];
 
@@ -79,15 +79,15 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-              {t.home.services.title}
+              {t.home.HOWWEPROTECTYOU.title}
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              {t.home.services.subtitle}
+              {t.home.HOWWEPROTECTYOU.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => {
+            {HOWWEPROTECTYOU.map((HOWWEPROTECTYOU, index) => {
               const Icon = service.icon;
               return (
                 <Link
