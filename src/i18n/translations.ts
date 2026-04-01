@@ -21,7 +21,7 @@ export const translations = {
       bookConsultation: 'Book a Free Consultation',
       sendContract: 'Get a Free Initial Assessment',
       contactUs: 'Get In Touch',
-      viewServices: 'View All Services',
+      viewServices: 'HOW WE PROTECT YOU',
     },
     floatingButton: {
       chatWhatsApp: 'Chat on WhatsApp',
