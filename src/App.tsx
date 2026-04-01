@@ -19,12 +19,12 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<HOWWEPROTECTYOUPage />} />
-          <Route path="/services/home-builders" element={<HomeBuildersService />} />
-          <Route path="/services/developers-smes" element={<DevelopersSMEsService />} />
-          <Route path="/services/project-management" element={<ProjectManagementService />} />
-          <Route path="/services/value-engineering" element={<ValueEngineeringService />} />
-          <Route path="/services/claims-variations" element={<ClaimsVariationsService />} />
+          <Route path="/HOWWEPROTECTYOU" element={<HOWWEPROTECTYOUPage />} />
+          <Route path="/HOWWEPROTECTYOU/home-builders" element={<HomeBuildersService />} />
+          <Route path="/HOWWEPROTECTYOU/developers-smes" element={<DevelopersSMEsService />} />
+          <Route path="/HOWWEPROTECTYOU/project-management" element={<ProjectManagementService />} />
+          <Route path="/HOWWEPROTECTYOU/value-engineering" element={<ValueEngineeringService />} />
+          <Route path="/HOWWEPROTECTYOU/claims-variations" element={<ClaimsVariationsService />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/how-we-work" element={<HowWeWorkPage />} />
           <Route path="/contact" element={<ContactPage />} />
