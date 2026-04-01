@@ -29,8 +29,8 @@ export const translations = {
     },
     home: {
       hero: {
-        title: 'Specialist Construction Contracts & Project Advisory in UAE',
-        subtitle: 'At BCX, we partner with UAE owners and developers to navigate the complexities of contract management. Led by seasoned Project Manager Esam Al Hammadi, our boutique approach focuses on unlocking value and minimizing risk at every stage of the project lifecycle, from private residential builds to high-rise developments.',
+        title: 'Protect Your Construction Investment Before You Sign',
+        subtitle: 'Independent contract review for homeowners and developers in the UAE to identify risks, hidden costs, and unfair clauses.',
         bookConsultation: 'Book a Free 60-Minute Consultation',
         sendContract: 'Send Your Contract for Review',
         credentials: 'Former Government & Semi-Government Expert · Achieved AED 837M in projects savings · Specialized in contract claims, tender evaluation and dispute avoidance',
