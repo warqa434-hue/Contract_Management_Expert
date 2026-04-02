@@ -60,7 +60,7 @@ export default function DevelopersSMEsService() {
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">
-            Contract & Tender Review for Developers, Consultants & Contractors
+            Contract & Tender Review for Developers
           </h1>
           <p className="text-xl text-slate-200 text-center max-w-3xl mx-auto leading-relaxed">
             Structured review of tender documents, contract conditions, specifications, and BOQ to identify risks, gaps, ambiguities and cost exposures before contract award.
@@ -97,13 +97,10 @@ export default function DevelopersSMEsService() {
                   <strong className="text-slate-900">Developers:</strong> Owners and employers preparing to award contracts for commercial or residential projects
                 </p>
                 <p>
-                  <strong className="text-slate-900">Main Contractors:</strong> Companies bidding on or awarded construction contracts who need a second set of eyes
+                  <strong className="text-slate-900">Development Managers:</strong> Teams coordinating multiple packages and needing tighter risk control before award
                 </p>
                 <p>
-                  <strong className="text-slate-900">SME Contractors:</strong> Growing firms taking on larger or more complex projects and need contract support
-                </p>
-                <p>
-                  <strong className="text-slate-900">Consultants:</strong> Engineering and project management firms advising clients on contract strategy
+                  <strong className="text-slate-900">Investor-Led Projects:</strong> Private investors and family offices requiring an independent contract risk review
                 </p>
               </div>
             </div>

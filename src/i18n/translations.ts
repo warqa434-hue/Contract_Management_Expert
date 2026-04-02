@@ -11,7 +11,7 @@ export const translations = {
     footer: {
       quickLinks: 'Quick Links',
       contact: 'Contact',
-      description: 'Independent contract and project advisory for home builders, SMEs, and high-rise developers in the UAE.',
+      description: 'Independent contract and project advisory for homeowners and developers in the UAE.',
       copyright: 'BCX Building Contract Expert. All rights reserved.',
       location: 'Abu Dhabi, UAE',
     },
@@ -80,7 +80,7 @@ export const translations = {
     },
     about: {
       title: 'About Us',
-      subtitle: 'A boutique construction contracts and project advisory practice led by Esam Al Hammadi',
+      subtitle: 'A boutique construction contracts and project advisory practice for homeowners and developers, led by Esam Al Hammadi',
       who: {
         title: 'Who We Are',
         p1: 'We are a specialist construction contracts and project advisory practice based in Abu Dhabi, led by Project Manager Esam Al Hammadi, who brings over 30 years of experience delivering complex infrastructure, high-rise, transport and facilities projects in the UAE.',
@@ -122,12 +122,12 @@ export const translations = {
       title: 'HOW WE PROTECT YOU',
       subtitle: 'We provide independent, structured support across the full project and contract lifecycle – from pre-tender review and value engineering, through contract negotiation and administration, to claims management and dispute resolution. Our services scale from individual villa projects to multi-million-dirham high-rise and infrastructure portfolios, with every mandate led personally by Esam and supported when needed by specialist partners.',
       homeBuilders: {
-        title: 'Contract Review for Home Builders & Individual Owners',
+        title: 'Contract Review for Homeowners & Individual Owners',
         description: 'Before you sign your villa or home building contract, have an independent expert review it with you. We help owners understand contract terms and conditions, specifications, BOQ scope, payment terms, obligations, exclusions and risks in plain language.',
         tags: ['Contract Review', 'Residential', 'Villa Projects'],
       },
       developers: {
-        title: 'Contract & Tender Review for Developers, Consultants & Contractors',
+        title: 'Contract & Tender Review for Developers',
         description: 'Structured review of tender documents, contracts, specifications and BOQ to identify risks, gaps, ambiguities and cost exposures before contract award.',
         tags: ['High-Rise', 'Commercial', 'Pre-Award Review'],
       },
@@ -154,7 +154,7 @@ export const translations = {
     },
     portfolio: {
       title: 'Portfolio',
-      subtitle: 'Selected project examples demonstrating contract review, claims support, and project management across residential, commercial, and high-rise developments in the UAE.',
+      subtitle: 'Selected project examples demonstrating contract review, claims support, and project management for homeowners and developers across residential, commercial, and high-rise developments in the UAE.',
       metrics: {
         projects: '25+',
         projectsLabel: 'Projects Supported',
@@ -182,7 +182,7 @@ export const translations = {
     },
     howWeWork: {
       title: 'How We Work',
-      subtitle: 'A transparent, structured approach to contract review and project support – designed to give you clarity, control, and confidence in your construction projects.',
+      subtitle: 'A transparent, structured approach to contract review and project support for homeowners and developers – designed to give you clarity, control, and confidence in your construction projects.',
       process: {
         title: 'Our 4-Step Process',
         step1: {
@@ -302,11 +302,8 @@ export const translations = {
         errorMessage: 'Failed to submit form. Please try again or contact us directly via email or phone.',
         clientTypes: {
           select: 'Select...',
-          individual: 'Individual / Home Builder',
+          individual: 'Homeowner',
           developer: 'Developer',
-          contractor: 'Contractor',
-          consultant: 'Consultant',
-          other: 'Other',
         },
         locations: {
           select: 'Select...',
@@ -376,7 +373,7 @@ export const translations = {
     footer: {
       quickLinks: 'روابط سريعة',
       contact: 'اتصل بنا',
-      description: 'استشارات مستقلة في العقود والمشاريع لمالكي العقارات قيد الانشاء والشركات الصغيرة والمتوسطة ومطوري مشاريع المباني الشاهقة في الإمارات.',
+      description: 'استشارات مستقلة في العقود والمشاريع لمالكي المنازل ومطوري المشاريع في الإمارات.',
       copyright: 'جميع الحقوق محفوظة لشركة BCX لإدارة العقود',
       location: 'أبوظبي، الإمارات',
     },
@@ -404,7 +401,7 @@ export const translations = {
         title: 'كيف يمكننا توفير الحماية لك',
         subtitle: 'خدمات متخصصة في العقود والمشاريع تتدرج من مشاريع الفلل الخاصة إلى المباني الشاهقة ',
         homeBuilders: {
-          title: 'مراجعة العقود لأصحاب الفلل',
+        title: 'مراجعة العقود لمالكي المنازل',
           description: 'مساعدة أصحاب الفلل على فهم شروط وأحكام العقود والمواصفات والمخاطر والالتزامات والتكاليف المخفية قبل توقيع عقد الاستشارات أو المقاولات.',
         },
         developers: {
@@ -443,7 +440,7 @@ export const translations = {
     },
     about: {
       title: 'من نحن',
-      subtitle: 'ممارسون متخصصون في عقود البناء واستشارات المشاريع ',
+      subtitle: 'ممارسون متخصصون في عقود البناء واستشارات المشاريع لمالكي المنازل والمطورين',
       who: {
         title: 'من نحن',
         p1: 'نحن ممارسون متخصصون في عقود البناء واستشارات المشاريع مقرها في أبوظبي، بقيادة المهندس ومدير المشاريع عصام الحمادي، الذي يمتلك أكثر من 30 عامًا من الخبرة في تنفيذ مشاريع البنية التحتية المعقدة والمباني الشاهقة والنقل والمرافق في الإمارات.',
@@ -517,7 +514,7 @@ export const translations = {
     },
     portfolio: {
       title: 'المشاريع',
-      subtitle: 'أمثلة مشاريع مختارة توضح مراجعة العقود ودعم المطالبات وإدارة المشاريع عبر تطوير المشاريع السكنية والتجارية في الإمارات.',
+      subtitle: 'أمثلة مشاريع مختارة توضح مراجعة العقود ودعم المطالبات وإدارة المشاريع لمالكي المنازل والمطورين عبر المشاريع السكنية والتجارية في الإمارات.',
       metrics: {
         projects: '25+',
         projectsLabel: 'مشروع مدعوم',
@@ -666,11 +663,8 @@ export const translations = {
         errorMessage: 'فشل إرسال النموذج. يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة عبر البريد الإلكتروني أو الهاتف.',
         clientTypes: {
           select: 'اختر...',
-          individual: 'فرد / مالك مسكن',
+          individual: 'مالك منزل',
           developer: 'مطور',
-          contractor: 'مقاول',
-          consultant: 'استشاري',
-          other: 'آخر',
         },
         locations: {
           select: 'اختر...',

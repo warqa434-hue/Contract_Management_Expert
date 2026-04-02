@@ -36,10 +36,10 @@ export default function PortfolioPage() {
     {
       icon: ShoppingBag,
       category: 'Retail Fit-Out',
-      title: 'Pre-Award Contract Review for Contractor',
+      title: 'Pre-Award Contract Review for Retail Developer',
       location: 'Dubai',
       description: 'Pre-tender review of contract conditions, specifications, and BOQ for shopping mall retail fit-out tender. Identified unbalanced risk allocation, incomplete scope definition, and missing coordination requirements.',
-      outcome: 'Contractor submitted clarifications addressing key risks before bid submission. Won the tender and delivered project with minimal variations due to clear contract foundation.',
+      outcome: 'Developer issued clarifications addressing key risks before tender award. Project moved into delivery with a clearer contract foundation and minimal variations.',
       tags: ['Contract Review', 'Commercial', 'Pre-Tender'],
     },
     {
@@ -47,8 +47,8 @@ export default function PortfolioPage() {
       category: 'Office Development',
       title: 'Variation Claim Preparation',
       location: 'Abu Dhabi',
-      description: 'Preparation of variation claim for MEP subcontractor on office development project. Scope changes by employer required additional HVAC equipment and modified fire protection systems.',
-      outcome: 'Prepared fully documented variation claim with contractual basis, cost breakdown, and programme impact. Claim approved for AED 320,000 with 15-day EOT.',
+      description: 'Preparation and assessment of a major variation claim on an office development project. Scope changes required additional HVAC equipment and modified fire protection systems.',
+      outcome: 'Prepared fully documented variation submission with contractual basis, cost breakdown, and programme impact. Claim approved for AED 320,000 with 15-day EOT.',
       tags: ['Variations', 'Commercial', 'Claim Preparation'],
     },
     {

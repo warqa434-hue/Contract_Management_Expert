@@ -27,7 +27,7 @@ export default function ProjectManagementService() {
     {
       icon: Users,
       title: 'Neutral Third Party',
-      description: 'Independent perspective that helps bridge gaps between owners, consultants, and contractors',
+      description: 'Independent perspective that protects homeowner and developer interests across project stakeholders',
     },
     {
       icon: Calendar,
@@ -38,26 +38,21 @@ export default function ProjectManagementService() {
 
   const suitableFor = [
     {
-      title: 'Owners & Developers',
+      title: 'Homeowners & Developers',
       description: 'You have a project underway but lack in-house project management or contract administration expertise.',
-      examples: ['First-time developers', 'SME owners managing construction', 'Investors overseeing remote projects'],
+      examples: ['Homeowners building villas', 'First-time developers', 'Investors overseeing remote projects'],
     },
     {
-      title: 'Contractors & Subcontractors',
-      description: 'You need support managing contract obligations, tracking variations, or preparing claims.',
-      examples: ['Small to medium contractors', 'Specialist subcontractors', 'Companies expanding into new project types'],
-    },
-    {
-      title: 'Consultants & Engineers',
-      description: 'You need additional resource to support contract administration on complex or time-sensitive projects.',
-      examples: ['Engineering consultants', 'Project management firms', 'Supervision consultants'],
+      title: 'Private Development Teams',
+      description: 'You need support managing contract obligations, tracking variations, and protecting budget outcomes.',
+      examples: ['Owner-side PM teams', 'Family office projects', 'Lean in-house delivery teams'],
     },
   ];
 
   const approach = [
     {
       title: 'Integrated Support',
-      description: 'We work alongside your existing consultants, contractors, or internal teams – not replacing them, but representing you by filling specific gaps in contract knowledge or capacity.',
+      description: 'We work alongside your existing delivery team - not replacing them, but representing your interests by filling specific gaps in contract knowledge or capacity.',
     },
     {
       title: 'Scalable Engagement',
@@ -82,7 +77,7 @@ export default function ProjectManagementService() {
             Project & Contract Management Support
           </h1>
           <p className="text-xl text-slate-200 text-center max-w-3xl mx-auto leading-relaxed">
-            Part-time or task-based project and contract management support for owners, developers, contractors, and consultants – keeping your project on time, on budget, and contractually protected.
+            Part-time or task-based project and contract management support for homeowners and developers - keeping your project on time, on budget, and contractually protected.
           </p>
         </div>
       </section>

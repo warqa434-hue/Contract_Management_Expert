@@ -3,7 +3,28 @@ import { FileText, Building2, ClipboardCheck, Scale, ArrowRight, CheckCircle2 } 
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function HomePage() {
-  const { t, dir } = useLanguage();
+  const { t, dir, language } = useLanguage();
+
+  const personaContent =
+    language === 'ar'
+      ? {
+          homeownerTitle: 'أنا مالك منزل',
+          homeownerDescription: 'أبني فيلا أو منزل خاص وأحتاج مراجعة عقدي بوضوح قبل الالتزام.',
+          homeownerPrimaryCta: 'ابدأ مراجعة عقد المنزل',
+          developerTitle: 'أنا مطور',
+          developerDescription: 'أدير مشروعا تطويريا وأحتاج دعما في العقود والمناقصات وتقليل المخاطر.',
+          developerPrimaryCta: 'اطلب مراجعة للمطورين',
+          secondaryCta: 'استكشف الخدمات',
+        }
+      : {
+          homeownerTitle: 'I am a Homeowner',
+          homeownerDescription: 'I am building a villa or private residence and need contract clarity before I commit.',
+          homeownerPrimaryCta: 'Start Home Contract Review',
+          developerTitle: 'I am a Developer',
+          developerDescription: 'I am leading a development project and need contract, tender, and risk support.',
+          developerPrimaryCta: 'Request Developer Review',
+          secondaryCta: 'Explore Services',
+        };
 
   const HOWWEPROTECTYOU = [
     {
@@ -52,20 +73,46 @@ export default function HomePage() {
             {t.home.hero.subtitle}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100 transition-all transform hover:scale-105 shadow-lg"
-            >
-              {t.home.hero.bookConsultation}
-              <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} size={20} />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-slate-700 rounded-lg hover:bg-slate-600 transition-all transform hover:scale-105 shadow-lg border border-slate-600"
-            >
-              {t.home.hero.sendContract}
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-10 text-left">
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
+              <h3 className="text-2xl font-bold mb-2">{personaContent.homeownerTitle}</h3>
+              <p className="text-slate-200 mb-5 leading-relaxed">{personaContent.homeownerDescription}</p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/services/home-builders"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100 transition-all shadow-lg"
+                >
+                  {personaContent.homeownerPrimaryCta}
+                  <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} size={18} />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-slate-700 rounded-lg hover:bg-slate-600 transition-all border border-slate-500"
+                >
+                  {t.home.hero.bookConsultation}
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
+              <h3 className="text-2xl font-bold mb-2">{personaContent.developerTitle}</h3>
+              <p className="text-slate-200 mb-5 leading-relaxed">{personaContent.developerDescription}</p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/services/developers-smes"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100 transition-all shadow-lg"
+                >
+                  {personaContent.developerPrimaryCta}
+                  <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} size={18} />
+                </Link>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-slate-700 rounded-lg hover:bg-slate-600 transition-all border border-slate-500"
+                >
+                  {personaContent.secondaryCta}
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className={`flex flex-wrap items-center justify-center gap-4 text-sm text-slate-300 max-w-3xl mx-auto ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>

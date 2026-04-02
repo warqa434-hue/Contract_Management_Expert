@@ -94,13 +94,10 @@ export default function ValueEngineeringService() {
               </h3>
               <div className="space-y-4 text-slate-700 leading-relaxed">
                 <p>
-                  <strong className="text-slate-900">Owners & Developers:</strong> Looking to optimize project budgets before tendering
+                  <strong className="text-slate-900">Homeowners:</strong> Looking to optimize villa budgets before finalizing contracts
                 </p>
                 <p>
-                  <strong className="text-slate-900">Consultants:</strong> Supporting clients on cost reduction initiatives
-                </p>
-                <p>
-                  <strong className="text-slate-900">Contractors:</strong> Seeking to improve bid competitiveness while maintaining margins
+                  <strong className="text-slate-900">Developers:</strong> Seeking strategic cost optimization across design, procurement, and delivery
                 </p>
               </div>
             </div>

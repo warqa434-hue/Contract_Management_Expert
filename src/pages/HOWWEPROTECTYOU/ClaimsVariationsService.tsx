@@ -17,8 +17,8 @@ export default function ClaimsVariationsService() {
     {
       icon: FileText,
       title: 'Claim Preparation',
-      description: 'For Contractors',
-      details: 'We help Clients structure and document claims for delays, variations, or additional costs – ensuring they are contractually sound and supported by evidence.',
+      description: 'For Homeowners & Developers',
+      details: 'We help clients structure and document claims for delays, variations, or additional costs - ensuring they are contractually sound and supported by evidence.',
     },
     {
       icon: Calculator,
@@ -29,13 +29,13 @@ export default function ClaimsVariationsService() {
     {
       icon: MessageSquare,
       title: 'Variation Management',
-      description: 'For All Parties',
+      description: 'For Homeowners & Developers',
       details: 'Support for pricing, negotiating, and documenting variations to minimize disputes and ensure fair compensation.',
     },
     {
       icon: ShieldCheck,
       title: 'Dispute Advisory',
-      description: 'For All Parties',
+      description: 'For Homeowners & Developers',
       details: 'Independent analysis and strategy for managing construction disputes, including preparation for mediation or adjudication.',
     },
   ];
@@ -56,7 +56,7 @@ export default function ClaimsVariationsService() {
   ];
 
   const when = [
-    'You received a delay claim or variation claim from your contractor and need to assess it',
+    'You received a delay claim or variation claim from your contractor and need an independent assessment',
     'You believe you are entitled to an EOT or additional cost but unsure how to structure the claim',
     'You are facing disputed variations and need independent analysis of entitlement',
     'Your project is behind schedule and you need to prepare or respond to delay claims',

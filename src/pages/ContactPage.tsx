@@ -193,9 +193,6 @@ export default function ContactPage() {
                         <option value="">{t.contact.form.clientTypes.select}</option>
                         <option value="individual">{t.contact.form.clientTypes.individual}</option>
                         <option value="developer">{t.contact.form.clientTypes.developer}</option>
-                        <option value="contractor">{t.contact.form.clientTypes.contractor}</option>
-                        <option value="consultant">{t.contact.form.clientTypes.consultant}</option>
-                        <option value="other">{t.contact.form.clientTypes.other}</option>
                       </select>
                     </div>
 
