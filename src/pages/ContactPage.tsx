@@ -1,10 +1,12 @@
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect } from 'react';
 import { Mail, Phone, MapPin, CheckCircle2, AlertCircle } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 import { getSupabase } from '../lib/supabase';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function ContactPage() {
-  const { t, dir } = useLanguage();
+  const { t, dir, language } = useLanguage();
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,6 +18,38 @@ export default function ContactPage() {
   });
 
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const selectedPersona = searchParams.get('persona');
+
+  const formHeading =
+    formData.client_type === 'developer'
+      ? language === 'ar'
+        ? 'استفسار المطورين'
+        : 'Developer Inquiry'
+      : formData.client_type === 'individual'
+        ? language === 'ar'
+          ? 'استفسار مالك منزل'
+          : 'Homeowner Inquiry'
+        : t.contact.form.title;
+
+  const formSubheading =
+    formData.client_type === 'developer'
+      ? language === 'ar'
+        ? 'شاركنا تفاصيل المشروع وسنعود إليك بخطة دعم مناسبة.'
+        : 'Share your project details and we will respond with a tailored support plan.'
+      : formData.client_type === 'individual'
+        ? language === 'ar'
+          ? 'شاركنا تفاصيل البناء وسنوضح لك أفضل الخطوات قبل الالتزام.'
+          : 'Share your build details and we will guide your next safest contract step.'
+        : '';
+
+  useEffect(() => {
+    if (selectedPersona === 'developer' && formData.client_type !== 'developer') {
+      setFormData((prev) => ({ ...prev, client_type: 'developer' }));
+    } else if (selectedPersona === 'homeowner' && formData.client_type !== 'individual') {
+      setFormData((prev) => ({ ...prev, client_type: 'individual' }));
+    }
+  }, [selectedPersona, formData.client_type]);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -100,8 +134,13 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <div className="bg-white p-8 sm:p-10 rounded-xl shadow-lg border border-slate-200">
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
-                  {t.contact.form.title}
+                  {formHeading}
                 </h2>
+                {formSubheading && (
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    {formSubheading}
+                  </p>
+                )}
 
                 {status === 'success' && (
                   <div className={`mb-6 bg-green-50 border-${dir === 'rtl' ? 'r' : 'l'}-4 border-green-500 p-5 rounded-${dir === 'rtl' ? 'l' : 'r'}-lg`}>

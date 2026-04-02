@@ -86,7 +86,7 @@ export default function HomePage() {
                   <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} size={18} />
                 </Link>
                 <Link
-                  to="/contact"
+                  to="/contact?persona=homeowner"
                   className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-slate-700 rounded-lg hover:bg-slate-600 transition-all border border-slate-500"
                 >
                   {t.home.hero.bookConsultation}
@@ -106,10 +106,10 @@ export default function HomePage() {
                   <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} size={18} />
                 </Link>
                 <Link
-                  to="/services"
+                  to="/contact?persona=developer"
                   className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-slate-700 rounded-lg hover:bg-slate-600 transition-all border border-slate-500"
                 >
-                  {personaContent.secondaryCta}
+                  {t.home.hero.bookConsultation}
                 </Link>
               </div>
             </div>
