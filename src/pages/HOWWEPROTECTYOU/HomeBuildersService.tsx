@@ -186,7 +186,7 @@ export default function HomeBuildersService() {
               <ArrowRight className="ml-2" size={20} />
             </Link>
             <Link
-              to="/how-i-work"
+              to="/how-we-work"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-slate-700 rounded-lg hover:bg-slate-600 transition-all transform hover:scale-105 shadow-lg border border-slate-600"
             >
               Learn About Our Process

@@ -170,7 +170,7 @@ export default function ValueEngineeringService() {
               <ArrowRight className="ml-2" size={20} />
             </Link>
             <Link
-              to="/how-i-work"
+              to="/how-we-work"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100 transition-all border border-slate-300 hover:border-slate-400 shadow-md"
             >
               Learn About Our Process

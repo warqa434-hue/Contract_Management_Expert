@@ -60,9 +60,9 @@ export default function HomePage() {
           <img
             src="/elitefix-hero-001.jpg"
             alt="Construction project management in luxury setting"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-80"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/78 via-slate-900/55 to-slate-900/35"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center lg:text-center">
@@ -71,6 +71,9 @@ export default function HomePage() {
           </h1>
           <p className="text-xl sm:text-2xl text-slate-200 mb-8 max-w-4xl mx-auto leading-relaxed">
             {t.home.hero.subtitle}
+          </p>
+          <p className="text-lg sm:text-xl font-semibold text-amber-200 mb-8 max-w-3xl mx-auto">
+            Free Contract Risk Review: Know the hidden clauses before you sign.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-10 text-left">
@@ -118,6 +121,52 @@ export default function HomePage() {
           <div className={`flex flex-wrap items-center justify-center gap-4 text-sm text-slate-300 max-w-3xl mx-auto ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
             <CheckCircle2 size={18} className="text-green-400" />
             <span>{t.home.hero.credentials}</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+              What problem we solve
+            </h2>
+            <p className="text-lg text-slate-700 mb-6 leading-relaxed">
+              We help homeowners and developers in the UAE avoid costly contract mistakes before signing, so projects stay protected from hidden legal and financial risks.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/contact?offer=free-risk-review"
+                className="inline-flex items-center justify-center px-7 py-3 text-base font-semibold text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-all"
+              >
+                Claim Free Contract Risk Review
+              </Link>
+              <Link
+                to="/contact?offer=free-checklist"
+                className="inline-flex items-center justify-center px-7 py-3 text-base font-semibold text-slate-900 bg-slate-100 rounded-lg hover:bg-slate-200 transition-all border border-slate-300"
+              >
+                Get Free Contract Risk Checklist
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
+            Popular UAE contract topics
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-slate-700">
+            <Link to="/HOWWEPROTECTYOU/home-builders" className="p-5 border border-slate-200 rounded-xl hover:border-slate-400 transition-colors">
+              Contract Review UAE for Homeowners
+            </Link>
+            <Link to="/HOWWEPROTECTYOU/developers-smes" className="p-5 border border-slate-200 rounded-xl hover:border-slate-400 transition-colors">
+              Construction Contract Risk UAE for Developers
+            </Link>
+            <Link to="/HOWWEPROTECTYOU/claims-variations" className="p-5 border border-slate-200 rounded-xl hover:border-slate-400 transition-colors">
+              Legal and Commercial Risk Before Signing in UAE
+            </Link>
           </div>
         </div>
       </section>
