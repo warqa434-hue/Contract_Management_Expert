@@ -29,27 +29,27 @@ export default function HomePage() {
   const HOWWEPROTECTYOU = [
     {
       icon: FileText,
-      title: t.home.HOWWEPROTECTYOU.homeBuilders.title,
-      description: t.home.HOWWEPROTECTYOU.homeBuilders.description,
-      link: '/HOW WE PROTECT YOU/home-builders',
+      title: t.home.HOWWEPROTECTYOU.IdentifyHiddenRisks.title,
+      description: t.home.HOWWEPROTECTYOU.IdentifyHiddenRisks.description,
+      link: '/HOWWEPROTECTYOU/home-builders',
     },
     {
       icon: Building2,
-      title: t.home.HOWWEPROTECTYOU.developers.title,
-      description: t.home.HOWWEPROTECTYOU.developers.description,
-      link: '/HOW WE PROTECT YOU/developers-smes',
+      title: t.home.HOWWEPROTECTYOU.ProtectYourFinancialPosition.title,
+      description: t.home.HOWWEPROTECTYOU.ProtectYourFinancialPosition.description,
+      link: '/HOWWEPROTECTYOU/developers-smes',
     },
     {
       icon: ClipboardCheck,
-      title: t.home.HOWWEPROTECTYOU.projectManagement.title,
-      description: t.home.HOWWEPROTECTYOU.projectManagement.description,
-      link: '/HOW WE PROTECT YOU/project-management',
+      title: t.home.HOWWEPROTECTYOU.PreventFutureDisputes.title,
+      description: t.home.HOWWEPROTECTYOU.PreventFutureDisputes.description,
+      link: '/HOWWEPROTECTYOU/project-management',
     },
     {
       icon: Scale,
       title: t.home.HOWWEPROTECTYOU.valueEngineering.title,
       description: t.home.HOWWEPROTECTYOU.valueEngineering.description,
-      link: '/HOW WE PROTECT YOU/value-engineering',
+      link: '/HOWWEPROTECTYOU/value-engineering',
     },
   ];
 
@@ -79,7 +79,7 @@ export default function HomePage() {
               <p className="text-slate-200 mb-5 leading-relaxed">{personaContent.homeownerDescription}</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  to="/services/home-builders"
+                  to="/HOWWEPROTECTYOU/home-builders"
                   className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100 transition-all shadow-lg"
                 >
                   {personaContent.homeownerPrimaryCta}
@@ -99,7 +99,7 @@ export default function HomePage() {
               <p className="text-slate-200 mb-5 leading-relaxed">{personaContent.developerDescription}</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  to="/services/developers-smes"
+                  to="/HOWWEPROTECTYOU/developers-smes"
                   className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100 transition-all shadow-lg"
                 >
                   {personaContent.developerPrimaryCta}
@@ -134,7 +134,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {HOWWEPROTECTYOU.map((HOWWEPROTECTYOU, index) => {
+            {HOWWEPROTECTYOU.map((service, index) => {
               const Icon = service.icon;
               return (
                 <Link

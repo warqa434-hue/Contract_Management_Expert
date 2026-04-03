@@ -1,7 +1,7 @@
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function LanguageToggle() {
-  const { language, setLanguage, dir } = useLanguage();
+  const { language, setLanguage } = useLanguage();
   const isArabic = language === 'ar';
 
   return (

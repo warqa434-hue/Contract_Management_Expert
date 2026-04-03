@@ -5,40 +5,40 @@ import { useLanguage } from '../contexts/LanguageContext';
 export default function HOWWEPROTECTYOUPage() {
   const { t, dir } = useLanguage();
 
-  const HOWWEPROTECTYOU = [
+  const services = [
     {
       icon: FileText,
-      title: t.services.homeBuilders.title,
+      title: t.HOWWEPROTECTYOU.homeBuilders.title,
       description: t.HOWWEPROTECTYOU.homeBuilders.description,
-      link: '/HOW-WE-PROTECT-YOU/home-builders',
+      link: '/HOWWEPROTECTYOU/home-builders',
       tags: t.HOWWEPROTECTYOU.homeBuilders.tags,
     },
     {
       icon: Building2,
       title: t.HOWWEPROTECTYOU.developers.title,
       description: t.HOWWEPROTECTYOU.developers.description,
-      link: '/HOW-WE-PROTECT-YOU/developers-smes',
+      link: '/HOWWEPROTECTYOU/developers-smes',
       tags: t.HOWWEPROTECTYOU.developers.tags,
     },
     {
       icon: ClipboardCheck,
       title: t.HOWWEPROTECTYOU.projectManagement.title,
       description: t.HOWWEPROTECTYOU.projectManagement.description,
-      link: '/HOW-WE-PROTECT-YOU/project-management',
+      link: '/HOWWEPROTECTYOU/project-management',
       tags: t.HOWWEPROTECTYOU.projectManagement.tags,
     },
     {
       icon: Scale,
       title: t.HOWWEPROTECTYOU.valueEngineering.title,
       description: t.HOWWEPROTECTYOU.valueEngineering.description,
-      link: '/HOW-WE-PROTECT-YOU/value-engineering',
+      link: '/HOWWEPROTECTYOU/value-engineering',
       tags: t.HOWWEPROTECTYOU.valueEngineering.tags,
     },
     {
       icon: Scale,
       title: t.HOWWEPROTECTYOU.claims.title,
       description: t.HOWWEPROTECTYOU.claims.description,
-      link: '/HOW-WE-PROTECT-YOU/claims-variations',
+      link: '/HOWWEPROTECTYOU/claims-variations',
       tags: t.HOWWEPROTECTYOU.claims.tags,
     },
   ];
@@ -47,9 +47,9 @@ export default function HOWWEPROTECTYOUPage() {
     <div>
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">{t.services.title}</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">{t.HOWWEPROTECTYOU.title}</h1>
           <p className="text-xl text-slate-200 max-w-3xl mx-auto">
-            {t.services.subtitle}
+            {t.HOWWEPROTECTYOU.subtitle}
           </p>
         </div>
       </section>
@@ -109,16 +109,16 @@ export default function HOWWEPROTECTYOUPage() {
       <section className="py-16 sm:py-24 bg-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
-            {t.services.notSure.title}
+            {t.HOWWEPROTECTYOU.notSure.title}
           </h2>
           <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-            {t.services.notSure.description}
+            {t.HOWWEPROTECTYOU.notSure.description}
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg hover:from-slate-600 hover:to-slate-800 transition-all transform hover:scale-105 shadow-lg"
           >
-            {t.services.notSure.cta}
+            {t.HOWWEPROTECTYOU.notSure.cta}
             <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} size={20} />
           </Link>
         </div>

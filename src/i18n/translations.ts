@@ -54,8 +54,7 @@ export const translations = {
           title: 'Value Engineering & Cost Optimization',
           description: 'Proven track record of delivering 15–25% cost reductions through strategic contract restructuring, specification optimization and innovative sourcing.',
         },
-        sendContract: 'Get a Free Initial Assessment'
-        },
+        sendContract: 'Get a Free Initial Assessment',
       },
       portfolio: {
         title: 'Trusted by Projects Across UAE',
@@ -313,7 +312,7 @@ export const translations = {
           otherEmirates: 'Other Emirates',
           outsideUAE: 'Outside UAE',
         },
-        HOWWEPROTECTYOU: {
+        services: {
           select: 'Select a service...',
           contractReviewHome: 'Contract Review (Home/Villa)',
           contractReviewDeveloper: 'Contract Review (Developer/Commercial)',
@@ -365,7 +364,7 @@ export const translations = {
     nav: {
       home: 'الرئيسية',
       about: 'من نحن',
-      HOWWEPROTECTYOU: 'كيف يمكننا توفير الحماية لك',
+      services: 'كيف يمكننا توفير الحماية لك',
       portfolio: 'المشاريع',
       howWeWork: 'كيف نعمل',
       contact: 'اتصل بنا',
@@ -400,22 +399,23 @@ export const translations = {
       HOWWEPROTECTYOU: {
         title: 'كيف يمكننا توفير الحماية لك',
         subtitle: 'خدمات متخصصة في العقود والمشاريع تتدرج من مشاريع الفلل الخاصة إلى المباني الشاهقة ',
-        homeBuilders: {
-        title: 'مراجعة العقود لمالكي المنازل',
-          description: 'مساعدة أصحاب الفلل على فهم شروط وأحكام العقود والمواصفات والمخاطر والالتزامات والتكاليف المخفية قبل توقيع عقد الاستشارات أو المقاولات.',
+        IdentifyHiddenRisks: {
+          title: 'تحديد المخاطر الخفية',
+          description: 'نراجع عقدك لكشف البنود غير الواضحة أو غير المتوازنة والالتزامات المخفية التي قد تسبب خسائر مالية.',
         },
-        developers: {
-          title: 'مراجعة العقود والمناقصات للمطورين',
-          description: 'مراجعة منهجية لعقود البناء والمواصفات وجداول  الكميات ووثائق المناقصات لتقليص حجم التغييرات والنزاعات والتأخيرات المحتملة.',
+        ProtectYourFinancialPosition: {
+          title: 'حماية موقفك المالي',
+          description: 'نوضح مخاطر الدفعات وبنود التغييرات والتكاليف المحتملة لحماية استثمارك.',
         },
-        projectManagement: {
-          title: 'دعم إدارة المشاريع والعقود',
-          description: 'إدارة مشاريع وعقود بدوام جزئي أو قائمة على المهام لتمثيل الملاك الذين يحتاجون إلى دعم مستقل من ذوي الخبرة.',
+        PreventFutureDisputes: {
+          title: 'منع النزاعات المستقبلية',
+          description: 'نساعدك على تفادي النزاعات عبر عقد واضح ومتوازن يحمي مصالحك.',
         },
         valueEngineering: {
           title: 'هندسة القيمة وتحسين التكاليف',
           description: 'سجل حافل في تحقيق وفورات مالية في التكاليف بنسبة 15-25٪ من خلال إعادة استراتيجية هيكلة العقود وتحسين هندسة القيمة للمواصفات والتوريد المبكر.',
         },
+        sendContract: 'احصل على تقييم أولي مجاني',
       },
       portfolio: {
         title: ' فريق موثوق به من قبل أصحاب المشاريع في جميع أنحاء الامارات',
