@@ -69,15 +69,15 @@ export const translations = {
       problemSolve: {
         heading: "What problem we solve",
         description:
-          "We help homeowners and developers in the UAE avoid costly contract mistakes before signing, so projects stay protected from hidden legal and financial risks.",
+          "We help homeowners and developers avoid costly contract mistakes before signing, so projects stay protected from hidden contractual and financial risks.",
         cta1: "Claim Free Contract Risk Review",
         cta2: "Get Free Contract Risk Checklist",
       },
       popularTopics: {
         heading: "Popular UAE contract topics",
-        topic1: "Contract Review UAE for Homeowners",
-        topic2: "Construction Contract Risk UAE for Developers",
-        topic3: "Legal and Commercial Risk Before Signing in UAE",
+        topic1: "Contract Review for Homeowners",
+        topic2: "Construction Contract Risk for Developers",
+        topic3: "Contractual and Commercial Risk Before Signing in UAE",
       },
       portfolio: {
         title: "Trusted by Projects Across UAE",
@@ -469,7 +469,7 @@ export const translations = {
         bookConsultation: "احجز استشارة مجانية لمدة 60 دقيقة",
         sendContract: "أرسل عقدك للمراجعة",
         freeReview:
-        "مراجعة مخاطر العقود مجاناً: تعرّف على البنود الخفية قبل التوقيع.",
+          "مراجعة مخاطر العقود مجاناً: تعرّف على البنود الخفية قبل التوقيع.",
         credentials:
           "خبير سابق في القطاعين الحكومي وشبه الحكومي ·  قاد عدة مشاريع وحقق توفير يقارب 837 مليون درهم للملاك· متخصص في مطالبات العقود وتقييم المناقصات وتجنب النزاعات",
       },
@@ -499,20 +499,20 @@ export const translations = {
         },
         sendContract: "احصل على تقييم أولي مجاني",
         freeReview:
-          "مراجعة مخاطر العقد مجانًا: تعرف على البنود المخفية قبل التوقيع.",
+          "مراجعة مخاطر العقد مجانًا: تعرف على البنود الخفية قبل التوقيع.",
       },
       problemSolve: {
         heading: "ما المشكلة التي نحلها",
         description:
-          "نساعد أصحاب المنازل والمطورين في الإمارات على تجنب الأخطاء التعاقدية المكلفة قبل التوقيع، بحيث تظل مشاريعهم محمية من المخاطر الهندسية والمالية الخفية.",
+          "نساعد أصحاب المنازل والمطورين في الإمارات على تجنب الأخطاء التعاقدية المكلفة قبل التوقيع، بحيث نحمي عقود مشاريعهم من المخاطر الهندسية والمالية الخفية.",
         cta1: "احصل على مراجعة مخاطر العقد مجانًا",
         cta2: "احصل على قائمة التحقق من مخاطر العقد مجانًا",
       },
       popularTopics: {
         heading: "مواضيع عقود شائعة في الإمارات",
-        topic1: "مراجعة العقود في الإمارات لأصحاب المنازل",
-        topic2: "مخاطر عقود البناء في الإمارات للمطورين",
-        topic3: "المخاطر الهندسية والتجارية المحتملة قبل توقيع العقد",
+        topic1: "مراجعة العقود لأصحاب المنازل",
+        topic2: "مخاطر عقود البناء للمطورين",
+        topic3: "المخاطر الهندسية والمالية المحتملة قبل توقيع العقد",
       },
       portfolio: {
         title: " فريق موثوق به من قبل أصحاب المشاريع في جميع أنحاء الامارات",
