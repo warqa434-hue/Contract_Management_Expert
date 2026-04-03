@@ -55,6 +55,19 @@ export const translations = {
           description: 'Proven track record of delivering 15–25% cost reductions through strategic contract restructuring, specification optimization and innovative sourcing.',
         },
         sendContract: 'Get a Free Initial Assessment',
+        freeReview: 'Free Contract Risk Review: Know the hidden clauses before you sign.',
+      },
+      problemSolve: {
+        heading: 'What problem we solve',
+        description: 'We help homeowners and developers in the UAE avoid costly contract mistakes before signing, so projects stay protected from hidden legal and financial risks.',
+        cta1: 'Claim Free Contract Risk Review',
+        cta2: 'Get Free Contract Risk Checklist',
+      },
+      popularTopics: {
+        heading: 'Popular UAE contract topics',
+        topic1: 'Contract Review UAE for Homeowners',
+        topic2: 'Construction Contract Risk UAE for Developers',
+        topic3: 'Legal and Commercial Risk Before Signing in UAE',
       },
       portfolio: {
         title: 'Trusted by Projects Across UAE',
@@ -416,6 +429,19 @@ export const translations = {
           description: 'سجل حافل في تحقيق وفورات مالية في التكاليف بنسبة 15-25٪ من خلال إعادة استراتيجية هيكلة العقود وتحسين هندسة القيمة للمواصفات والتوريد المبكر.',
         },
         sendContract: 'احصل على تقييم أولي مجاني',
+        freeReview: 'مراجعة مخاطر العقد مجانًا: تعرف على البنود المخفية قبل التوقيع.',
+      },
+      problemSolve: {
+        heading: 'ما المشكلة التي نحلها',
+        description: 'نساعد أصحاب المنازل والمطورين في الإمارات على تجنب الأخطاء التعاقدية المكلفة قبل التوقيع، بحيث تظل مشاريعهم محمية من المخاطر القانونية والمالية الخفية.',
+        cta1: 'احصل على مراجعة مخاطر العقد مجانًا',
+        cta2: 'احصل على قائمة التحقق من مخاطر العقد مجانًا',
+      },
+      popularTopics: {
+        heading: 'مواضيع عقود شائعة في الإمارات',
+        topic1: 'مراجعة العقود في الإمارات لأصحاب المنازل',
+        topic2: 'مخاطر عقود البناء في الإمارات للمطورين',
+        topic3: 'المخاطر القانونية والتجارية قبل التوقيع في الإمارات',
       },
       portfolio: {
         title: ' فريق موثوق به من قبل أصحاب المشاريع في جميع أنحاء الامارات',

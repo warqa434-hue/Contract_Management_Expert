@@ -73,7 +73,7 @@ export default function HomePage() {
             {t.home.hero.subtitle}
           </p>
           <p className="text-lg sm:text-xl font-semibold text-amber-200 mb-8 max-w-3xl mx-auto">
-            Free Contract Risk Review: Know the hidden clauses before you sign.
+            {t.home.HOWWEPROTECTYOU.freeReview}
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-10 text-left">
@@ -129,23 +129,23 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-slate-800 rounded-2xl border border-slate-700 p-8 sm:p-10 shadow-sm">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 mb-4">
-              What problem we solve
+              {t.home.problemSolve.heading}
             </h2>
             <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-              We help homeowners and developers in the UAE avoid costly contract mistakes before signing, so projects stay protected from hidden legal and financial risks.
+              {t.home.problemSolve.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact?offer=free-risk-review"
                 className="inline-flex items-center justify-center px-7 py-3 text-base font-semibold text-white bg-slate-600 rounded-lg hover:bg-slate-500 transition-all"
               >
-                Claim Free Contract Risk Review
+                {t.home.problemSolve.cta1}
               </Link>
               <Link
                 to="/contact?offer=free-checklist"
                 className="inline-flex items-center justify-center px-7 py-3 text-base font-semibold text-slate-200 bg-slate-700 rounded-lg hover:bg-slate-600 transition-all border border-slate-600"
               >
-                Get Free Contract Risk Checklist
+                {t.home.problemSolve.cta2}
               </Link>
             </div>
           </div>
@@ -155,17 +155,17 @@ export default function HomePage() {
       <section className="py-14 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 mb-6">
-            Popular UAE contract topics
+            {t.home.popularTopics.heading}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-slate-300">
             <Link to="/HOWWEPROTECTYOU/home-builders" className="p-5 border border-slate-700 rounded-xl hover:border-slate-500 hover:bg-slate-800 transition-colors">
-              Contract Review UAE for Homeowners
+              {t.home.popularTopics.topic1}
             </Link>
             <Link to="/HOWWEPROTECTYOU/developers-smes" className="p-5 border border-slate-700 rounded-xl hover:border-slate-500 hover:bg-slate-800 transition-colors">
-              Construction Contract Risk UAE for Developers
+              {t.home.popularTopics.topic2}
             </Link>
             <Link to="/HOWWEPROTECTYOU/claims-variations" className="p-5 border border-slate-700 rounded-xl hover:border-slate-500 hover:bg-slate-800 transition-colors">
-              Legal and Commercial Risk Before Signing in UAE
+              {t.home.popularTopics.topic3}
             </Link>
           </div>
         </div>
