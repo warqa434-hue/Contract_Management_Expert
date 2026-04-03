@@ -82,20 +82,20 @@ export default function ProjectManagementService() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-6 text-center">
             What's Included
           </h2>
-          <p className="text-lg text-slate-600 mb-12 text-center max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-400 mb-12 text-center max-w-3xl mx-auto leading-relaxed">
             Flexible support services tailored to your project phase and needs. From contract setup to handover, We can step in where you need help most.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {included.map((item, index) => (
-              <div key={index} className="flex items-start space-x-3 bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                <CheckCircle2 className="text-green-600 flex-shrink-0 mt-1" size={20} />
-                <span className="text-slate-700 leading-relaxed">{item}</span>
+              <div key={index} className="flex items-start space-x-3 bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-700">
+                <CheckCircle2 className="text-green-500 flex-shrink-0 mt-1" size={20} />
+                <span className="text-slate-300 leading-relaxed">{item}</span>
               </div>
             ))}
           </div>
@@ -104,14 +104,14 @@ export default function ProjectManagementService() {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <div key={index} className="bg-gradient-to-br from-slate-50 to-slate-100 p-6 rounded-xl border border-slate-200">
-                  <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg flex items-center justify-center mb-4">
+                <div key={index} className="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                  <div className="w-12 h-12 bg-gradient-to-br from-slate-600 to-slate-700 rounded-lg flex items-center justify-center mb-4">
                     <Icon className="text-white" size={24} />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                  <h3 className="text-lg font-semibold text-slate-100 mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-600 leading-relaxed text-sm">
+                  <p className="text-slate-400 leading-relaxed text-sm">
                     {benefit.description}
                   </p>
                 </div>
@@ -121,26 +121,26 @@ export default function ProjectManagementService() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 bg-slate-100">
+      <section className="py-16 sm:py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-12 text-center">
             Who This Service Is For
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {suitableFor.map((audience, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-md border border-slate-200">
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">
+              <div key={index} className="bg-slate-800 p-8 rounded-xl shadow-md border border-slate-700">
+                <h3 className="text-xl font-semibold text-slate-100 mb-4">
                   {audience.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed mb-6">
+                <p className="text-slate-400 leading-relaxed mb-6">
                   {audience.description}
                 </p>
-                <div className="border-t border-slate-200 pt-4">
-                  <p className="text-sm font-semibold text-slate-700 mb-3">Examples:</p>
+                <div className="border-t border-slate-700 pt-4">
+                  <p className="text-sm font-semibold text-slate-400 mb-3">Examples:</p>
                   <ul className="space-y-2">
                     {audience.examples.map((example, exIndex) => (
-                      <li key={exIndex} className="text-sm text-slate-600 flex items-start">
-                        <span className="text-slate-400 mr-2">•</span>
+                      <li key={exIndex} className="text-sm text-slate-400 flex items-start">
+                        <span className="text-slate-500 mr-2">•</span>
                         {example}
                       </li>
                     ))}
@@ -152,41 +152,41 @@ export default function ProjectManagementService() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-slate-950">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-6 text-center">
             How We Support Your Project
           </h2>
-          <p className="text-lg text-slate-600 mb-12 text-center max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-400 mb-12 text-center max-w-3xl mx-auto leading-relaxed">
             We work with your existing team as an independent resource – filling gaps, supporting peak periods, or handling specialized contract tasks that require focused expertise.
           </p>
 
           <div className="space-y-6">
             {approach.map((item, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-md border border-slate-200">
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">
+              <div key={index} className="bg-slate-800 p-8 rounded-xl shadow-md border border-slate-700">
+                <h3 className="text-xl font-semibold text-slate-100 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-400 leading-relaxed">
                   {item.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 bg-blue-50 border-l-4 border-blue-500 p-8 rounded-r-xl">
-            <h3 className="text-xl font-semibold text-slate-900 mb-4">
+          <div className="mt-12 bg-blue-950 border-l-4 border-blue-500 p-8 rounded-r-xl">
+            <h3 className="text-xl font-semibold text-slate-100 mb-4">
               Engagement Models
             </h3>
-            <div className="space-y-3 text-slate-700 leading-relaxed">
+            <div className="space-y-3 text-slate-300 leading-relaxed">
               <p>
-                <strong className="text-slate-900">Part-Time Support:</strong> Regular weekly or bi-weekly commitment for ongoing projects
+                <strong className="text-slate-100">Part-Time Support:</strong> Regular weekly or bi-weekly commitment for ongoing projects
               </p>
               <p>
-                <strong className="text-slate-900">Task-Based:</strong> Specific deliverables like variation reviews, claim preparation, or meeting support
+                <strong className="text-slate-100">Task-Based:</strong> Specific deliverables like variation reviews, claim preparation, or meeting support
               </p>
               <p>
-                <strong className="text-slate-900">On-Call Advisory:</strong> Available for urgent questions or document review as needed
+                <strong className="text-slate-100">On-Call Advisory:</strong> Available for urgent questions or document review as needed
               </p>
             </div>
           </div>

@@ -54,7 +54,7 @@ export default function HOWWEPROTECTYOUPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
             {services.map((service, index) => {
@@ -63,21 +63,21 @@ export default function HOWWEPROTECTYOUPage() {
                 <Link
                   key={index}
                   to={service.link}
-                  className="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-300 overflow-hidden"
+                  className="group block bg-slate-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-700 hover:border-slate-500 overflow-hidden"
                 >
                   <div className="p-8 sm:p-10">
                     <div className={`flex flex-col sm:flex-row sm:items-start space-y-6 sm:space-y-0 ${dir === 'rtl' ? 'sm:space-x-reverse' : ''} sm:space-x-8`}>
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center group-hover:from-slate-700 group-hover:to-slate-900 transition-all duration-300">
-                          <Icon className="text-slate-700 group-hover:text-white transition-colors" size={32} />
+                        <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-600 rounded-xl flex items-center justify-center group-hover:from-slate-500 group-hover:to-slate-600 transition-all duration-300">
+                          <Icon className="text-slate-300 group-hover:text-white transition-colors" size={32} />
                         </div>
                       </div>
 
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-slate-700 transition-colors">
+                        <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-white transition-colors">
                           {service.title}
                         </h3>
-                        <p className="text-slate-600 leading-relaxed mb-6">
+                        <p className="text-slate-400 leading-relaxed mb-6">
                           {service.description}
                         </p>
 
@@ -85,14 +85,14 @@ export default function HOWWEPROTECTYOUPage() {
                           {service.tags.map((tag, tagIndex) => (
                             <span
                               key={tagIndex}
-                              className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full"
+                              className="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full"
                             >
                               {tag}
                             </span>
                           ))}
                         </div>
 
-                        <div className={`inline-flex items-center text-slate-700 font-semibold group-hover:text-slate-900 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
+                        <div className={`inline-flex items-center text-slate-400 font-semibold group-hover:text-slate-200 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                           {t.common.learnMore}
                           <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'} group-hover:translate-x-1 transition-transform`} size={18} />
                         </div>
@@ -106,17 +106,17 @@ export default function HOWWEPROTECTYOUPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 bg-slate-100">
+      <section className="py-16 sm:py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-6">
             {t.HOWWEPROTECTYOU.notSure.title}
           </h2>
-          <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+          <p className="text-lg text-slate-400 mb-8 leading-relaxed">
             {t.HOWWEPROTECTYOU.notSure.description}
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg hover:from-slate-600 hover:to-slate-800 transition-all transform hover:scale-105 shadow-lg"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-br from-slate-600 to-slate-700 rounded-lg hover:from-slate-500 hover:to-slate-600 transition-all transform hover:scale-105 shadow-lg"
           >
             {t.HOWWEPROTECTYOU.notSure.cta}
             <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} size={20} />

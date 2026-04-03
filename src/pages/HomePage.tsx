@@ -125,25 +125,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-14 bg-slate-100">
+      <section className="py-14 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 shadow-sm">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+          <div className="bg-slate-800 rounded-2xl border border-slate-700 p-8 sm:p-10 shadow-sm">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 mb-4">
               What problem we solve
             </h2>
-            <p className="text-lg text-slate-700 mb-6 leading-relaxed">
+            <p className="text-lg text-slate-300 mb-6 leading-relaxed">
               We help homeowners and developers in the UAE avoid costly contract mistakes before signing, so projects stay protected from hidden legal and financial risks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact?offer=free-risk-review"
-                className="inline-flex items-center justify-center px-7 py-3 text-base font-semibold text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-all"
+                className="inline-flex items-center justify-center px-7 py-3 text-base font-semibold text-white bg-slate-600 rounded-lg hover:bg-slate-500 transition-all"
               >
                 Claim Free Contract Risk Review
               </Link>
               <Link
                 to="/contact?offer=free-checklist"
-                className="inline-flex items-center justify-center px-7 py-3 text-base font-semibold text-slate-900 bg-slate-100 rounded-lg hover:bg-slate-200 transition-all border border-slate-300"
+                className="inline-flex items-center justify-center px-7 py-3 text-base font-semibold text-slate-200 bg-slate-700 rounded-lg hover:bg-slate-600 transition-all border border-slate-600"
               >
                 Get Free Contract Risk Checklist
               </Link>
@@ -152,32 +152,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-14 bg-white">
+      <section className="py-14 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 mb-6">
             Popular UAE contract topics
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-slate-700">
-            <Link to="/HOWWEPROTECTYOU/home-builders" className="p-5 border border-slate-200 rounded-xl hover:border-slate-400 transition-colors">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-slate-300">
+            <Link to="/HOWWEPROTECTYOU/home-builders" className="p-5 border border-slate-700 rounded-xl hover:border-slate-500 hover:bg-slate-800 transition-colors">
               Contract Review UAE for Homeowners
             </Link>
-            <Link to="/HOWWEPROTECTYOU/developers-smes" className="p-5 border border-slate-200 rounded-xl hover:border-slate-400 transition-colors">
+            <Link to="/HOWWEPROTECTYOU/developers-smes" className="p-5 border border-slate-700 rounded-xl hover:border-slate-500 hover:bg-slate-800 transition-colors">
               Construction Contract Risk UAE for Developers
             </Link>
-            <Link to="/HOWWEPROTECTYOU/claims-variations" className="p-5 border border-slate-200 rounded-xl hover:border-slate-400 transition-colors">
+            <Link to="/HOWWEPROTECTYOU/claims-variations" className="p-5 border border-slate-700 rounded-xl hover:border-slate-500 hover:bg-slate-800 transition-colors">
               Legal and Commercial Risk Before Signing in UAE
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">
               {t.home.HOWWEPROTECTYOU.title}
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-400 max-w-3xl mx-auto">
               {t.home.HOWWEPROTECTYOU.subtitle}
             </p>
           </div>
@@ -189,22 +189,22 @@ export default function HomePage() {
                 <Link
                   key={index}
                   to={service.link}
-                  className="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-slate-300"
+                  className="group bg-slate-800 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-700 hover:border-slate-500"
                 >
                   <div className={`flex items-start ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-4`}>
                     <div className="flex-shrink-0">
-                      <div className="w-14 h-14 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg flex items-center justify-center group-hover:from-slate-700 group-hover:to-slate-900 transition-all duration-300">
-                        <Icon className="text-slate-700 group-hover:text-white transition-colors" size={28} />
+                      <div className="w-14 h-14 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center group-hover:from-slate-500 group-hover:to-slate-600 transition-all duration-300">
+                        <Icon className="text-slate-300 group-hover:text-white transition-colors" size={28} />
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-slate-900 mb-3 group-hover:text-slate-700 transition-colors">
+                      <h3 className="text-xl font-semibold text-slate-100 mb-3 group-hover:text-white transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-slate-600 leading-relaxed mb-4">
+                      <p className="text-slate-400 leading-relaxed mb-4">
                         {service.description}
                       </p>
-                      <div className={`inline-flex items-center text-slate-700 font-medium group-hover:text-slate-900 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
+                      <div className={`inline-flex items-center text-slate-400 font-medium group-hover:text-slate-200 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                         {t.common.learnMore}
                         <ArrowRight className={`${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'} group-hover:translate-x-1 transition-transform`} size={16} />
                       </div>
@@ -217,20 +217,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 bg-slate-50">
+      <section className="py-16 sm:py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">
               {t.home.portfolio.title}
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               {t.home.portfolio.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
+            <div className="bg-slate-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="h-64 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
                 <img
                   src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Luxury residential villa architecture"
@@ -238,17 +238,17 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                <h3 className="text-xl font-semibold text-slate-100 mb-2">
                   {t.home.portfolio.residential.title}
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-slate-400">
                   {t.home.portfolio.residential.description}
                 </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
+            <div className="bg-slate-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="h-64 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
                 <img
                   src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Modern commercial office building"
@@ -256,17 +256,17 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                <h3 className="text-xl font-semibold text-slate-100 mb-2">
                   {t.home.portfolio.commercial.title}
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-slate-400">
                   {t.home.portfolio.commercial.description}
                 </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-              <div className="h-64 bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
+            <div className="bg-slate-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div className="h-64 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
                 <img
                   src="https://images.pexels.com/photos/5668838/pexels-photo-5668838.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Business professionals reviewing contract documents"
@@ -274,10 +274,10 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                <h3 className="text-xl font-semibold text-slate-100 mb-2">
                   {t.home.portfolio.claims.title}
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-slate-400">
                   {t.home.portfolio.claims.description}
                 </p>
               </div>
@@ -286,9 +286,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 bg-slate-100">
+      <section className="py-16 sm:py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 sm:p-12 text-center text-white shadow-xl">
+          <div className="bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl p-8 sm:p-12 text-center text-white shadow-xl border border-slate-600">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               {t.home.cta.title}
             </h2>

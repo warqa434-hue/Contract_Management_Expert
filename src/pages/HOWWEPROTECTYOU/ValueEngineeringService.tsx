@@ -68,36 +68,36 @@ export default function ValueEngineeringService() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-6">
                 What's Included
               </h2>
-              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+              <p className="text-lg text-slate-400 mb-8 leading-relaxed">
                 Comprehensive value engineering review to identify and quantify cost reduction opportunities while maintaining project quality and functionality.
               </p>
               <div className="space-y-4">
                 {included.map((item, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle2 className="text-green-600 flex-shrink-0 mt-1" size={20} />
-                    <span className="text-slate-700 leading-relaxed">{item}</span>
+                    <CheckCircle2 className="text-green-500 flex-shrink-0 mt-1" size={20} />
+                    <span className="text-slate-300 leading-relaxed">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-slate-50 p-8 rounded-xl border border-slate-200">
-              <h3 className="text-xl font-semibold text-slate-900 mb-6">
+            <div className="bg-slate-800 p-8 rounded-xl border border-slate-700">
+              <h3 className="text-xl font-semibold text-slate-100 mb-6">
                 Who This Is For
               </h3>
-              <div className="space-y-4 text-slate-700 leading-relaxed">
+              <div className="space-y-4 text-slate-300 leading-relaxed">
                 <p>
-                  <strong className="text-slate-900">Homeowners:</strong> Looking to optimize villa budgets before finalizing contracts
+                  <strong className="text-slate-100">Homeowners:</strong> Looking to optimize villa budgets before finalizing contracts
                 </p>
                 <p>
-                  <strong className="text-slate-900">Developers:</strong> Seeking strategic cost optimization across design, procurement, and delivery
+                  <strong className="text-slate-100">Developers:</strong> Seeking strategic cost optimization across design, procurement, and delivery
                 </p>
               </div>
             </div>
@@ -107,14 +107,14 @@ export default function ValueEngineeringService() {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-md border border-slate-200">
-                  <div className="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="text-slate-700" size={24} />
+                <div key={index} className="bg-slate-800 p-6 rounded-xl shadow-md border border-slate-700">
+                  <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="text-slate-300" size={24} />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                  <h3 className="text-lg font-semibold text-slate-100 mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-600 leading-relaxed text-sm">
+                  <p className="text-slate-400 leading-relaxed text-sm">
                     {benefit.description}
                   </p>
                 </div>
@@ -124,25 +124,25 @@ export default function ValueEngineeringService() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 bg-slate-100">
+      <section className="py-16 sm:py-24 bg-slate-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-12 text-center">
             Our Approach
           </h2>
           <div className="space-y-6">
             {approach.map((item, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-md border border-slate-200">
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">
+              <div key={index} className="bg-slate-800 p-8 rounded-xl shadow-md border border-slate-700">
+                <h3 className="text-xl font-semibold text-slate-100 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-400 leading-relaxed">
                   {item.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 bg-gradient-to-br from-slate-700 to-slate-900 text-white p-8 rounded-xl">
+          <div className="mt-12 bg-gradient-to-br from-slate-700 to-slate-800 text-white p-8 rounded-xl border border-slate-600">
             <h3 className="text-2xl font-bold mb-4 text-center">
               Typical Value Engineering Engagement
             </h3>
@@ -153,25 +153,25 @@ export default function ValueEngineeringService() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-6">
             Ready to Optimize Your Project Costs?
           </h2>
-          <p className="text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto">
             Get expert value engineering analysis to unlock cost savings without compromising quality or schedule.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg hover:from-slate-600 hover:to-slate-800 transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-br from-slate-600 to-slate-700 rounded-lg hover:from-slate-500 hover:to-slate-600 transition-all transform hover:scale-105 shadow-lg"
             >
               Start a Review
               <ArrowRight className="ml-2" size={20} />
             </Link>
             <Link
               to="/how-we-work"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100 transition-all border border-slate-300 hover:border-slate-400 shadow-md"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-slate-200 bg-slate-800 rounded-lg hover:bg-slate-700 transition-all border border-slate-600 shadow-md"
             >
               Learn About Our Process
             </Link>

@@ -80,15 +80,15 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 bg-slate-100">
+      <section className="py-12 sm:py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {metrics.map((metric, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center border border-slate-200">
-                <div className="text-3xl sm:text-4xl font-bold text-slate-900 mb-2">
+              <div key={index} className="bg-slate-800 p-6 rounded-xl shadow-md text-center border border-slate-700">
+                <div className="text-3xl sm:text-4xl font-bold text-slate-100 mb-2">
                   {metric.number}
                 </div>
-                <div className="text-slate-600 font-medium">
+                <div className="text-slate-400 font-medium">
                   {metric.label}
                 </div>
               </div>
@@ -97,13 +97,13 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">
               {t.portfolio.examples.title}
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
               {t.portfolio.examples.subtitle}
             </p>
           </div>
@@ -112,47 +112,47 @@ export default function PortfolioPage() {
             {projects.map((project, index) => {
               const Icon = project.icon;
               return (
-                <div key={index} className="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden">
+                <div key={index} className="bg-slate-800 rounded-xl shadow-md border border-slate-700 overflow-hidden">
                   <div className="p-8 sm:p-10">
                     <div className={`flex flex-col sm:flex-row sm:items-start space-y-6 sm:space-y-0 ${dir === 'rtl' ? 'sm:space-x-reverse' : ''} sm:space-x-8`}>
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center">
-                          <Icon className="text-slate-700" size={32} />
+                        <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-600 rounded-xl flex items-center justify-center">
+                          <Icon className="text-slate-300" size={32} />
                         </div>
                       </div>
 
                       <div className="flex-1">
                         <div className={`flex items-center ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-3 mb-3`}>
-                          <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">
+                          <span className="text-sm font-semibold text-slate-400 uppercase tracking-wide">
                             {project.category}
                           </span>
-                          <span className="text-slate-300">•</span>
-                          <span className="text-sm text-slate-600">
+                          <span className="text-slate-600">•</span>
+                          <span className="text-sm text-slate-400">
                             {project.location}
                           </span>
                         </div>
 
-                        <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                        <h3 className="text-2xl font-bold text-slate-100 mb-4">
                           {project.title}
                         </h3>
 
                         <div className="mb-6">
-                          <h4 className="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-2">
+                          <h4 className="text-sm font-semibold text-slate-400 uppercase tracking-wide mb-2">
                             {t.portfolio.projectDetailsLabel}
                           </h4>
-                          <p className="text-slate-600 leading-relaxed">
+                          <p className="text-slate-400 leading-relaxed">
                             {project.description}
                           </p>
                         </div>
 
-                        <div className={`bg-green-50 border-${dir === 'rtl' ? 'r' : 'l'}-4 border-green-500 p-5 rounded-${dir === 'rtl' ? 'l' : 'r'}-lg mb-6`}>
+                        <div className={`bg-green-950 border-${dir === 'rtl' ? 'r' : 'l'}-4 border-green-600 p-5 rounded-${dir === 'rtl' ? 'l' : 'r'}-lg mb-6`}>
                           <div className={`flex items-start ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-3`}>
-                            <CheckCircle2 className="text-green-600 flex-shrink-0 mt-1" size={20} />
+                            <CheckCircle2 className="text-green-500 flex-shrink-0 mt-1" size={20} />
                             <div>
-                              <h4 className="text-sm font-semibold text-slate-900 uppercase tracking-wide mb-2">
+                              <h4 className="text-sm font-semibold text-slate-200 uppercase tracking-wide mb-2">
                                 {t.portfolio.outcomeLabel}
                               </h4>
-                              <p className="text-slate-700 leading-relaxed">
+                              <p className="text-slate-300 leading-relaxed">
                                 {project.outcome}
                               </p>
                             </div>
@@ -163,7 +163,7 @@ export default function PortfolioPage() {
                           {project.tags.map((tag, tagIndex) => (
                             <span
                               key={tagIndex}
-                              className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full font-medium"
+                              className="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full font-medium"
                             >
                               {tag}
                             </span>
@@ -179,13 +179,13 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 bg-slate-100">
+      <section className="py-16 sm:py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white p-8 sm:p-12 rounded-xl shadow-lg border border-slate-200">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 text-center">
+          <div className="bg-slate-800 p-8 sm:p-12 rounded-xl shadow-lg border border-slate-700">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 mb-4 text-center">
               {t.portfolio.confidentiality.title}
             </h2>
-            <p className="text-slate-600 leading-relaxed text-center">
+            <p className="text-slate-400 leading-relaxed text-center">
               {t.portfolio.confidentiality.description}
             </p>
           </div>

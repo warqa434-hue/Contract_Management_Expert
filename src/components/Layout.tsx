@@ -25,15 +25,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+    <div className="min-h-screen flex flex-col bg-slate-950">
+      <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className={`flex items-center ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-2`}>
-              <div className="bg-gradient-to-br from-slate-700 to-slate-900 text-white px-3 py-2 rounded-lg font-bold text-xl">
+              <div className="bg-gradient-to-br from-slate-600 to-slate-800 text-white px-3 py-2 rounded-lg font-bold text-xl">
                 BCX
               </div>
-              <span className="hidden sm:block text-slate-700 font-medium">Building Contract Expert</span>
+              <span className="hidden sm:block text-slate-200 font-medium">Building Contract Expert</span>
             </Link>
 
             <div className="hidden md:flex items-center space-x-4">
@@ -43,8 +43,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   to={item.href}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'bg-slate-100 text-slate-900'
-                      : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                      ? 'bg-slate-700 text-white'
+                      : 'text-slate-400 hover:bg-slate-800 hover:text-slate-100'
                   }`}
                 >
                   {item.name}
@@ -58,7 +58,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <LanguageToggle />
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-md text-slate-600 hover:bg-slate-100"
+                className="p-2 rounded-md text-slate-400 hover:bg-slate-800"
               >
                 {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -66,7 +66,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t">
+            <div className="md:hidden py-4 border-t border-slate-800">
               <div className="flex flex-col space-y-1">
                 {navigation.map((item) => (
                   <Link
@@ -75,8 +75,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`px-4 py-3 rounded-md text-base font-medium transition-colors ${
                       isActive(item.href)
-                        ? 'bg-slate-100 text-slate-900'
-                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                        ? 'bg-slate-700 text-white'
+                        : 'text-slate-400 hover:bg-slate-800 hover:text-slate-100'
                     }`}
                   >
                     {item.name}
@@ -94,24 +94,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <FloatingReviewButton />
 
-      <footer className="bg-slate-900 text-white mt-16">
+      <footer className="bg-slate-900 border-t border-slate-800 text-white mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className={`flex items-center ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-2 mb-4`}>
-                <div className="bg-gradient-to-br from-slate-700 to-slate-600 text-white px-3 py-2 rounded-lg font-bold text-xl">
+                <div className="bg-gradient-to-br from-slate-600 to-slate-700 text-white px-3 py-2 rounded-lg font-bold text-xl">
                   BCX
                 </div>
                 <span className="font-medium">Building Contract Expert</span>
               </div>
-              <p className="text-slate-300 text-sm">
+              <p className="text-slate-400 text-sm">
                 {t.footer.description}
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">{t.footer.quickLinks}</h3>
-              <ul className="space-y-2 text-sm text-slate-300">
+              <h3 className="font-semibold mb-4 text-slate-200">{t.footer.quickLinks}</h3>
+              <ul className="space-y-2 text-sm text-slate-400">
                 {navigation.map((item) => (
                   <li key={item.href}>
                     <Link to={item.href} className="hover:text-white transition-colors">
@@ -123,8 +123,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">{t.footer.contact}</h3>
-              <ul className="space-y-3 text-sm text-slate-300">
+              <h3 className="font-semibold mb-4 text-slate-200">{t.footer.contact}</h3>
+              <ul className="space-y-3 text-sm text-slate-400">
                 <li className={`flex items-start ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-2`}>
                   <MapPin size={16} className="mt-0.5 flex-shrink-0" />
                   <span>{t.footer.location}</span>
@@ -141,7 +141,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
 
-          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-400">
+          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-500">
             <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
           </div>
         </div>
