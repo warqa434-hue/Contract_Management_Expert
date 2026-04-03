@@ -131,11 +131,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </li>
                 <li className={`flex items-start ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-2`}>
                   <Mail size={16} className="mt-0.5 flex-shrink-0" />
-                  <span>esam@bcx.ae</span>
+                  <span dir="ltr">esam@bcx.ae</span>
                 </li>
                 <li className={`flex items-start ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-2`}>
                   <Phone size={16} className="mt-0.5 flex-shrink-0" />
-                  <span>+971 56 900 1888</span>
+                  <span dir="ltr">+971 56 900 1888</span>
                 </li>
               </ul>
             </div>

@@ -102,12 +102,14 @@ export default function ContactPage() {
       label: t.contact.info.email,
       value: 'esam@bcx.ae',
       href: 'mailto:esam@bcx.ae',
+      ltr: true,
     },
     {
       icon: Phone,
       label: t.contact.info.phone,
       value: '+971 56 900 1888',
       href: 'tel:+971569001888',
+      ltr: true,
     },
     {
       icon: MapPin,
@@ -329,6 +331,7 @@ export default function ContactPage() {
                           {contact.href ? (
                             <a
                               href={contact.href}
+                              dir={contact.ltr ? 'ltr' : undefined}
                               className="text-slate-200 hover:text-white transition-colors"
                             >
                               {contact.value}
@@ -367,6 +370,7 @@ export default function ContactPage() {
                 </p>
                 <a
                   href="mailto:esam@bcx.ae"
+                  dir="ltr"
                   className="text-blue-400 font-semibold hover:text-blue-300 transition-colors"
                 >
                   esam@bcx.ae
