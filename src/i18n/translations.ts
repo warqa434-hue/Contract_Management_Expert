@@ -30,9 +30,12 @@ export const translations = {
     },
     home: {
       hero: {
-        title: "Protect Your Construction Investment Before You Sign",
+        title: "Don't Sign Your Construction Contract Before Reviewing It",
         subtitle:
-          "Independent contract review for homeowners and developers in the UAE to identify risks, hidden costs, and unfair clauses.",
+          "Protect your loan and investment from costly contract mistakes before construction starts",
+        emotionalAnchor:
+          "One mistake in your contract can cost you hundreds of thousands",
+        whatsappCta: "WhatsApp Us Now — It's Free",
         bookConsultation: "Book a Free 60-Minute Consultation",
         sendContract: "Send Your Contract for Review",
         credentials:
@@ -103,6 +106,51 @@ export const translations = {
         title: "Ready to Protect Your Project?",
         subtitle:
           "Get expert contract review and management support before issues arise",
+      },
+      problem: {
+        title: "Is Your Contract Actually Protecting You?",
+        subtitle:
+          "Most UAE homeowners and developers sign contracts without knowing what they're agreeing to.",
+        pain1: "Large upfront payments with no protection if the contractor disappears",
+        pain2: "Vague clauses that shift all financial risk onto you",
+        pain3: "Hidden extra costs buried in the specifications and BOQ",
+        pain4: "Project delays with no compensation clause in the contract",
+        warning:
+          "The problem doesn't start at construction... it starts with the contract you sign.",
+      },
+      solution: {
+        title: "We Review Your Contract Before You Sign",
+        subtitle: "So you walk in with confidence — not regrets.",
+        item1: "We identify unfair and unclear contract clauses",
+        item2: "We protect your payment structure and financial position",
+        item3: "We flag hidden costs and scope gaps before construction starts",
+        item4: "We prevent future disputes with clear contract terms",
+        cta: "Get Your Contract Reviewed — First Step is Free",
+      },
+      mortgage: {
+        title: "Your Loan is a Responsibility, Not a Gamble",
+        line1:
+          "The bank finances your project — but the full financial risk sits with you.",
+        line2:
+          "One contract mistake can put your loan, your home, and your family's future at risk.",
+        cta: "Protect Your Investment — Chat with Us Now",
+      },
+      trust: {
+        stat1: "30+",
+        stat1Label: "Years Experience",
+        stat2: "25+",
+        stat2Label: "Projects Supported",
+        stat3: "AED 4.8B+",
+        stat3Label: "Combined Project Value",
+        stat4: "100%",
+        stat4Label: "Client Satisfaction",
+      },
+      finalCta: {
+        title: "Ready to Review Your Contract?",
+        subtitle:
+          "Don't sign anything until you've spoken with us. It could save you hundreds of thousands.",
+        whatsappCta: "WhatsApp Us Now",
+        contactCta: "Or Submit an Inquiry",
       },
     },
     about: {
@@ -463,9 +511,10 @@ export const translations = {
     },
     home: {
       hero: {
-        title: "تأكد من حماية استثمارك العقاري قبل توقيع العقد",
-        subtitle:
-          "الخبرة في مراجعة عقود الملاك والمطورين العقاريين، لتحديد المخاطر والنفقات الخفية والبنود المجحفة.",
+        title: "لا توقّع عقد البناء… قبل مراجعته",
+        subtitle: "احمِ قرضك من الأخطاء المكلفة قبل بدء المشروع",
+        emotionalAnchor: "خطأ واحد في العقد ممكن يكلفك مئات الآلاف",
+        whatsappCta: "تواصل عبر واتساب — مجاناً",
         bookConsultation: "احجز استشارة مجانية لمدة 60 دقيقة",
         sendContract: "أرسل عقدك للمراجعة",
         freeReview:
@@ -537,6 +586,49 @@ export const translations = {
         title: "هل أنت مستعد لحماية مشروعك؟",
         subtitle:
           "احصل على الخبرة في مراجعة عقدك ودعمك هندسيا قبل وقوع المشكلات",
+      },
+      problem: {
+        title: "هل أنت متأكد أن عقدك يحميك؟",
+        subtitle:
+          "معظم الملاك في الإمارات يوقّعون عقوداً دون أن يفهموا ما يوافقون عليه.",
+        pain1: "دفعات مقدمة ضخمة بدون ضمانات إذا اختفى المقاول",
+        pain2: "بنود مبهمة تحمّلك المسؤولية المالية وحدك",
+        pain3: "تكاليف إضافية خفية مدفونة في المواصفات",
+        pain4: "تأخيرات في المشروع بدون بند تعويض في العقد",
+        warning: "المشكلة لا تبدأ في البناء… تبدأ في العقد الذي توقّعه.",
+      },
+      solution: {
+        title: "نحن نراجع عقدك قبل التوقيع",
+        subtitle: "لتدخل بثقة — لا بندم.",
+        item1: "نكشف البنود غير العادلة وغير الواضحة في العقد",
+        item2: "نحمي هيكل الدفعات وموقفك المالي",
+        item3: "نرصد التكاليف الخفية وفجوات النطاق قبل بدء البناء",
+        item4: "نمنع النزاعات المستقبلية بعقد واضح وشروط محددة",
+        cta: "راجع عقدك — الخطوة الأولى مجانية",
+      },
+      mortgage: {
+        title: "قرضك مسؤولية… مو مخاطرة",
+        line1: "البنك يموّل مشروعك — لكن المخاطرة المالية الكاملة عليك أنت.",
+        line2:
+          "خطأ واحد في العقد ممكن يعرّض قرضك ومنزلك ومستقبل عائلتك للخطر.",
+        cta: "احمِ استثمارك — تواصل معنا الآن",
+      },
+      trust: {
+        stat1: "30+",
+        stat1Label: "سنوات خبرة",
+        stat2: "25+",
+        stat2Label: "مشروع مدعوم",
+        stat3: "4.8 مليار+",
+        stat3Label: "إجمالي قيمة المشاريع",
+        stat4: "100%",
+        stat4Label: "رضا العملاء",
+      },
+      finalCta: {
+        title: "مستعد لمراجعة عقدك؟",
+        subtitle:
+          "لا توقّع شيئاً قبل أن تتحدث معنا. ممكن تنقذك من خسائر بمئات الآلاف.",
+        whatsappCta: "تواصل عبر واتساب",
+        contactCta: "أو أرسل لنا استفساراً",
       },
     },
     about: {
