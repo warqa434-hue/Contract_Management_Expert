@@ -66,14 +66,14 @@ export default function HomePage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center lg:text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            {t.home.hero.title}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+            {language === 'ar' ? 'لا توقّع عقد البناء… قبل مراجعته' : t.home.hero.title}
           </h1>
-          <p className="text-xl sm:text-2xl text-slate-200 mb-8 max-w-4xl mx-auto leading-relaxed">
-            {t.home.hero.subtitle}
+          <p className="text-xl sm:text-2xl text-slate-200 mb-3 max-w-4xl mx-auto leading-relaxed">
+            {language === 'ar' ? 'احمِ قرضك من الأخطاء المكلفة قبل بدء المشروع' : t.home.hero.subtitle}
           </p>
-          <p className="text-lg sm:text-xl font-semibold text-amber-200 mb-8 max-w-3xl mx-auto">
-            {t.home.HOWWEPROTECTYOU.freeReview}
+          <p className="text-lg sm:text-xl text-amber-200 mb-8 max-w-3xl mx-auto">
+            {language === 'ar' ? 'قرضك مسؤولية… مو مخاطرة' : t.home.HOWWEPROTECTYOU.freeReview}
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-10 text-left">
