@@ -12,12 +12,9 @@ import {
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function HomePage() {
-  const { t, dir, language } = useLanguage();
+  const { t, dir } = useLanguage();
 
-  const whatsappMessage = language === 'ar'
-    ? encodeURIComponent('السلام عليكم، عندي عقد بناء وأبغى مراجعته قبل التوقيع')
-    : encodeURIComponent('Hello, I would like to review my construction contract before signing.');
-  const whatsappUrl = `https://wa.me/971569001888?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/971569001888?text=${encodeURIComponent(t.home.whatsappPrefill)}`;
 
   const services = [
     {
@@ -69,12 +66,11 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* ── 1. HERO ──────────────────────────────────────────────── */}
       <section className="relative bg-slate-900 text-white overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
           <img
             src="/elitefix-hero-001.jpg"
-            alt="Construction contract review UAE"
+            alt={t.home.hero.title}
             className="w-full h-full object-cover opacity-75"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/65 to-slate-900/90" />
@@ -84,11 +80,9 @@ export default function HomePage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-5 leading-tight text-white">
             {t.home.hero.title}
           </h1>
-
           <p className="text-xl sm:text-2xl text-slate-200 mb-3 max-w-3xl mx-auto leading-relaxed">
             {t.home.hero.subtitle}
           </p>
-
           <p className="text-lg sm:text-xl text-amber-300 mb-10 font-medium">
             {t.home.hero.emotionalAnchor}
           </p>
@@ -99,12 +93,11 @@ export default function HomePage() {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="button-hero-whatsapp"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg hover:shadow-green-900/40 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg w-full sm:w-auto"
             >
               <MessageCircle size={22} />
               {t.home.hero.whatsappCta}
             </a>
-
             <Link
               to="/contact"
               data-testid="link-hero-consultation"
@@ -121,7 +114,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2. PROBLEM ───────────────────────────────────────────── */}
       <section className="py-16 sm:py-20 bg-slate-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -148,7 +140,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className={`flex items-center justify-center gap-3 bg-amber-950/50 border border-amber-800/50 rounded-xl px-6 py-4 ${dir === 'rtl' ? 'flex-row-reverse text-right' : ''}`}>
+          <div className={`flex items-center justify-center gap-3 bg-amber-950/50 border border-amber-800/50 rounded-xl px-6 py-4 ${dir === 'rtl' ? 'flex-row-reverse' : ''}`}>
             <AlertTriangle size={20} className="text-amber-400 flex-shrink-0" />
             <p className="text-amber-200 font-medium text-center">
               {t.home.problem.warning}
@@ -157,7 +149,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 3. SOLUTION ──────────────────────────────────────────── */}
       <section className="py-16 sm:py-20 bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -199,7 +190,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. MORTGAGE ANGLE ────────────────────────────────────── */}
       <section className="py-16 sm:py-20 bg-slate-800">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
@@ -224,7 +214,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 5. TRUST METRICS ─────────────────────────────────────── */}
       <section className="py-12 bg-slate-900 border-y border-slate-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -242,7 +231,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 6. SERVICES GRID ─────────────────────────────────────── */}
       <section className="py-16 sm:py-20 bg-slate-950">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -280,7 +268,7 @@ export default function HomePage() {
                       <span className={`inline-flex items-center gap-1.5 text-slate-400 text-sm font-medium group-hover:text-slate-200 transition-colors ${dir === 'rtl' ? 'flex-row-reverse' : ''}`}>
                         {t.common.learnMore}
                         <ArrowRight
-                          className={`group-hover:translate-x-1 transition-transform ${dir === 'rtl' ? 'rotate-180 group-hover:-translate-x-1 group-hover:translate-x-0' : ''}`}
+                          className={`group-hover:translate-x-1 transition-transform ${dir === 'rtl' ? 'rotate-180' : ''}`}
                           size={15}
                         />
                       </span>
@@ -293,7 +281,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 7. FINAL CTA ─────────────────────────────────────────── */}
       <section className="py-16 sm:py-24 bg-slate-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8 sm:p-12 text-center shadow-xl">
@@ -303,7 +290,6 @@ export default function HomePage() {
             <p className="text-lg text-slate-300 mb-8 max-w-xl mx-auto leading-relaxed">
               {t.home.finalCta.subtitle}
             </p>
-
             <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 ${dir === 'rtl' ? 'sm:flex-row-reverse' : ''}`}>
               <a
                 href={whatsappUrl}

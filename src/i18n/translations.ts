@@ -152,6 +152,8 @@ export const translations = {
         whatsappCta: "WhatsApp Us Now",
         contactCta: "Or Submit an Inquiry",
       },
+      whatsappPrefill:
+        "Hello, I would like to review my construction contract before signing.",
     },
     about: {
       title: "About Us",
@@ -630,6 +632,8 @@ export const translations = {
         whatsappCta: "تواصل عبر واتساب",
         contactCta: "أو أرسل لنا استفساراً",
       },
+      whatsappPrefill:
+        "السلام عليكم، عندي عقد بناء وأبغى مراجعته قبل التوقيع",
     },
     about: {
       title: "من نحن",
