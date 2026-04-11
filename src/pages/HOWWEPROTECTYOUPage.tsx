@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FileText, Building2, ClipboardCheck, Scale, ArrowRight } from 'lucide-react';
+import { FileText, Building2, ClipboardCheck, Scale, Key, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function HOWWEPROTECTYOUPage() {
@@ -40,6 +40,13 @@ export default function HOWWEPROTECTYOUPage() {
       description: t.HOWWEPROTECTYOU.claims.description,
       link: '/HOWWEPROTECTYOU/claims-variations',
       tags: t.HOWWEPROTECTYOU.claims.tags,
+    },
+    {
+      icon: Key,
+      title: t.HOWWEPROTECTYOU.handover.title,
+      description: t.HOWWEPROTECTYOU.handover.description,
+      link: '/HOWWEPROTECTYOU/property-handover',
+      tags: t.HOWWEPROTECTYOU.handover.tags,
     },
   ];
 

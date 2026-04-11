@@ -8,6 +8,7 @@ import DevelopersSMEsService from './pages/HOWWEPROTECTYOU/DevelopersSMEsService
 import ProjectManagementService from './pages/HOWWEPROTECTYOU/ProjectManagementService';
 import ValueEngineeringService from './pages/HOWWEPROTECTYOU/ValueEngineeringService';
 import ClaimsVariationsService from './pages/HOWWEPROTECTYOU/ClaimsVariationsService';
+import PropertyHandoverService from './pages/HOWWEPROTECTYOU/PropertyHandoverService';
 import PortfolioPage from './pages/PortfolioPage';
 import HowWeWorkPage from './pages/HowWeWorkPage';
 import ContactPage from './pages/ContactPage';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/HOWWEPROTECTYOU/project-management" element={<ProjectManagementService />} />
           <Route path="/HOWWEPROTECTYOU/value-engineering" element={<ValueEngineeringService />} />
           <Route path="/HOWWEPROTECTYOU/claims-variations" element={<ClaimsVariationsService />} />
+          <Route path="/HOWWEPROTECTYOU/property-handover" element={<PropertyHandoverService />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/how-we-work" element={<HowWeWorkPage />} />
           <Route path="/contact" element={<ContactPage />} />

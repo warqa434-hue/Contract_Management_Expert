@@ -237,6 +237,12 @@ export const translations = {
           "Support for owners and developers in preparing, responding to, or negotiating claims for time and cost, and in managing variations and EOT assessments to prevent disputes.",
         tags: ["Claims", "Variations", "EOT", "Dispute Resolution"],
       },
+      handover: {
+        title: "Expert Property Handover Management",
+        description:
+          "Professional representation for property owners during the final transition from contractor to owner. We ensure your investment meets every contractual standard — snagging, compliance, documentation, and final sign-off — before you accept.",
+        tags: ["Snagging", "Handover Inspection", "Contract Compliance"],
+      },
       notSure: {
         title: "Not Sure Which Service You Need?",
         description:
@@ -712,6 +718,12 @@ export const translations = {
         description:
           "دعم الملاك في إعداد أو الرد على أو التفاوض على المطالبات بالوقت والتكلفة، وفي إدارة التغييرات وتقييمات تمديد الوقت لمنع النزاعات.",
         tags: ["المطالبات", "التغييرات", "تمديد الوقت", "حل النزاعات"],
+      },
+      handover: {
+        title: "إدارة تسليم العقارات باحترافية",
+        description:
+          "تمثيل احترافي لأصحاب العقارات خلال مرحلة التسليم النهائي من المقاول إلى المالك. نضمن أن استثمارك يلبي كل المعايير التعاقدية — الكشف عن العيوب والامتثال والوثائق والتوقيع النهائي — قبل أن تقبل العقار.",
+        tags: ["كشف العيوب", "فحص التسليم", "الامتثال التعاقدي"],
       },
       notSure: {
         title: "غير واثق من الخدمة التي تحتاجها؟",
