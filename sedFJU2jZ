@@ -6,8 +6,7 @@ expertMode = true
 channel = "stable-25_05"
 
 [deployment]
-deploymentTarget = "autoscale"
-run = ["node", "./dist/index.cjs"]
+deploymentTarget = "static"
 build = ["npm", "run", "build"]
 publicDir = "dist"
 
