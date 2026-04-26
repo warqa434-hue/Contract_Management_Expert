@@ -14,7 +14,7 @@ export default function FloatingReviewButton() {
   }, []);
 
   const whatsappNumber = '+971569001888';
-  const whatsappMessage = encodeURIComponent('Hello, I would like to inquire about your contract management services.');
+  const whatsappMessage = encodeURIComponent(t.home.whatsappPrefill);
   const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\+/g, '')}?text=${whatsappMessage}`;
 
   return (
