@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FileText,
@@ -8,6 +9,7 @@ import {
   CheckCircle2,
   AlertTriangle,
   MessageCircle,
+  ChevronDown,
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from '../components/SEOHead';
@@ -40,6 +42,82 @@ const JSON_LD = {
   priceRange: 'Contact for pricing',
 };
 
+const FAQ_CONTENT = {
+  en: {
+    heading: 'Frequently Asked Questions',
+    subheading: 'Common questions about UAE construction contracts and how BCX can help.',
+    items: [
+      {
+        q: 'Do I need a contract review before signing?',
+        a: 'Yes — strongly recommended. Most construction contracts in the UAE are drafted by or in favour of the contractor. Without a professional review, you may unknowingly accept vague scope, hidden cost risks, unfair payment terms, or limited recourse if things go wrong. A review before signing is far less expensive than resolving a dispute after.',
+      },
+      {
+        q: 'What is a BOQ and why does it matter?',
+        a: 'BOQ stands for Bill of Quantities — a detailed schedule listing all the materials, quantities, and prices in your construction project. If the BOQ is vague, incomplete, or missing items, you could face significant extra costs for work that should have been included. We review your BOQ to identify gaps, inconsistencies, and pricing risks before you commit.',
+      },
+      {
+        q: 'How long does a contract review take?',
+        a: 'Most standard home-building contract reviews are completed within 2–4 business days. Larger or more complex projects (developers, multi-package tenders) typically take 5–7 business days depending on the volume of documents. We confirm the timeline when you send your documents.',
+      },
+      {
+        q: 'How much does a contract review cost?',
+        a: 'Pricing depends on the scope and complexity of the documents. We offer a free 60-minute initial consultation to understand your situation before providing a proposal. In most cases, the fee is recovered many times over through the risks and costs we help you avoid.',
+      },
+      {
+        q: 'Can you help if construction has already started?',
+        a: 'Yes. We regularly assist clients with ongoing projects — reviewing variation claims, assessing extension of time entitlements, preparing or responding to payment disputes, and managing handover issues. The earlier we get involved, the more options you have, but it is rarely too late.',
+      },
+      {
+        q: 'Do you work across the UAE or only in Dubai?',
+        a: 'We serve clients across the UAE — Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, and other emirates. Most contract review and advisory work can be handled remotely with documents shared digitally. Site visits can be arranged where necessary.',
+      },
+    ],
+  },
+  ar: {
+    heading: 'الأسئلة الشائعة',
+    subheading: 'أسئلة شائعة حول عقود البناء في الإمارات وكيف يمكن لـ BCX مساعدتك.',
+    items: [
+      {
+        q: 'هل أحتاج إلى مراجعة العقد قبل التوقيع؟',
+        a: 'نعم — يُنصح بشدة بذلك. معظم عقود البناء في الإمارات تُصاغ لصالح المقاول. بدون مراجعة احترافية، قد تقبل دون علمك بنطاق غامض ومخاطر تكاليف خفية وشروط دفع غير عادلة أو تقييد للخيارات عند حدوث مشكلات. المراجعة قبل التوقيع أقل تكلفة بكثير من حل نزاع بعد ذلك.',
+      },
+      {
+        q: 'ما هو جدول الكميات (BOQ) ولماذا هو مهم؟',
+        a: 'جدول الكميات (BOQ) هو جدول تفصيلي يسرد جميع المواد والكميات والأسعار في مشروع البناء الخاص بك. إذا كان جدول الكميات غامضاً أو غير مكتمل أو يفتقر إلى بنود، فقد تواجه تكاليف إضافية كبيرة لأعمال كان يجب أن تكون مدرجة. نراجع جدول الكميات الخاص بك لتحديد الثغرات وعدم الاتساق ومخاطر التسعير قبل التزامك.',
+      },
+      {
+        q: 'كم يستغرق مراجعة العقد؟',
+        a: 'تُنجز معظم مراجعات عقود بناء المنازل القياسية في غضون 2-4 أيام عمل. المشاريع الأكبر أو الأكثر تعقيداً (المطورون والمناقصات متعددة الحزم) تستغرق عادةً 5-7 أيام عمل حسب حجم الوثائق. نؤكد الجدول الزمني عند استلام وثائقك.',
+      },
+      {
+        q: 'كم تكلفة مراجعة العقد؟',
+        a: 'تعتمد الأسعار على نطاق الوثائق وتعقيدها. نقدم استشارة مجانية لمدة 60 دقيقة لفهم وضعك قبل تقديم عرض. في معظم الحالات، تُسترد الرسوم أضعافاً من خلال المخاطر والتكاليف التي نساعدك على تجنبها.',
+      },
+      {
+        q: 'هل يمكنك المساعدة إذا كان البناء قد بدأ بالفعل؟',
+        a: 'نعم. نساعد العملاء بانتظام في المشاريع الجارية - مراجعة مطالبات التغيير وتقييم استحقاقات تمديد الوقت وإعداد أو الرد على نزاعات الدفع وإدارة مشكلات التسليم. كلما شاركنا مبكراً كلما كانت لديك خيارات أكثر، لكن نادراً ما يكون الوقت متأخراً جداً.',
+      },
+      {
+        q: 'هل تعملون في جميع أنحاء الإمارات أم في دبي فقط؟',
+        a: 'نخدم العملاء في جميع أنحاء الإمارات - دبي وأبوظبي والشارقة ورأس الخيمة وغيرها من الإمارات. يمكن معالجة معظم أعمال مراجعة العقود والاستشارات عن بُعد مع مشاركة الوثائق رقمياً. يمكن ترتيب زيارات الموقع عند الضرورة.',
+      },
+    ],
+  },
+};
+
+const FAQ_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_CONTENT.en.items.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+};
+
 export default function HomePage() {
   const { t, dir, language } = useLanguage();
 
@@ -56,6 +134,8 @@ export default function HomePage() {
     },
   };
   const s = seo[language];
+  const faq = FAQ_CONTENT[language];
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const whatsappUrl = `https://wa.me/971569001888?text=${encodeURIComponent(t.home.whatsappPrefill)}`;
 
@@ -113,6 +193,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
       />
       <section className="relative bg-slate-900 text-white overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
@@ -323,6 +407,53 @@ export default function HomePage() {
                     </div>
                   </div>
                 </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-20 bg-slate-900" dir={dir}>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`text-center mb-12 ${dir === 'rtl' ? 'text-right sm:text-center' : ''}`}>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-3">
+              {faq.heading}
+            </h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              {faq.subheading}
+            </p>
+          </div>
+          <div className="space-y-3">
+            {faq.items.map((item, i) => {
+              const isOpen = openIndex === i;
+              return (
+                <div
+                  key={i}
+                  className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden"
+                  data-testid={`faq-item-${i + 1}`}
+                >
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : i)}
+                    data-testid={`faq-toggle-${i + 1}`}
+                    className={`w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-slate-750 transition-colors ${dir === 'rtl' ? 'flex-row-reverse text-right' : ''}`}
+                    aria-expanded={isOpen}
+                  >
+                    <span className="text-base font-semibold text-slate-100 leading-snug">
+                      {item.q}
+                    </span>
+                    <ChevronDown
+                      size={20}
+                      className={`flex-shrink-0 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <div className={`px-6 pb-5 ${dir === 'rtl' ? 'text-right' : ''}`}>
+                      <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
+                        {item.a}
+                      </p>
+                    </div>
+                  )}
+                </div>
               );
             })}
           </div>
