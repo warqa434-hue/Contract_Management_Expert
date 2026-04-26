@@ -243,6 +243,7 @@ export default function HomePage() {
             <Link
               to="/contact"
               data-testid="link-hero-consultation"
+              onClick={() => trackEvent('cta_click', { label: 'hero_book_consultation' })}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-white/10 border border-white/30 rounded-xl hover:bg-white/20 transition-all w-full sm:w-auto backdrop-blur-sm"
             >
               {t.home.hero.bookConsultation}
@@ -394,6 +395,7 @@ export default function HomePage() {
                   key={i}
                   to={service.link}
                   data-testid={`card-service-${i + 1}`}
+                  onClick={() => trackEvent('cta_click', { label: `service_card_${service.link.split('/').pop()}` })}
                   className="group bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-slate-500 transition-all duration-200"
                 >
                   <div className={`flex items-start gap-4 ${dir === 'rtl' ? 'flex-row-reverse text-right' : ''}`}>
@@ -496,6 +498,7 @@ export default function HomePage() {
               <Link
                 to="/contact"
                 data-testid="link-final-contact"
+                onClick={() => trackEvent('cta_click', { label: 'final_cta_contact' })}
                 className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-300 bg-slate-700 border border-slate-600 rounded-xl hover:bg-slate-600 hover:text-white transition-all w-full sm:w-auto"
               >
                 {t.home.finalCta.contactCta}

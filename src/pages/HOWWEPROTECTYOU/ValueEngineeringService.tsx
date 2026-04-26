@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { trackEvent } from '../../lib/analytics';
 import { TrendingDown, CheckCircle2, ArrowRight, BarChart3, Zap, Target, DollarSign } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SEOHead from '../../components/SEOHead';
@@ -208,6 +209,7 @@ export default function ValueEngineeringService() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
+              onClick={() => trackEvent('cta_click', { label: 'value_engineering_primary' })}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-br from-slate-600 to-slate-700 rounded-lg hover:from-slate-500 hover:to-slate-600 transition-all transform hover:scale-105 shadow-lg"
             >
               {c.cta.primary}
@@ -215,6 +217,7 @@ export default function ValueEngineeringService() {
             </Link>
             <Link
               to="/how-we-work"
+              onClick={() => trackEvent('cta_click', { label: 'value_engineering_secondary' })}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-slate-200 bg-slate-800 rounded-lg hover:bg-slate-700 transition-all border border-slate-600 shadow-md"
             >
               {c.cta.secondary}

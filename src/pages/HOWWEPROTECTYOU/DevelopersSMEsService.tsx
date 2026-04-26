@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { trackEvent } from '../../lib/analytics';
 import { Building2, CheckCircle2, ArrowRight, TrendingDown, Users, FileWarning, ClipboardCheck } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SEOHead from '../../components/SEOHead';
@@ -211,6 +212,7 @@ export default function DevelopersSMEsService() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
+              onClick={() => trackEvent('cta_click', { label: 'developers_smes_primary' })}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-br from-slate-600 to-slate-700 rounded-lg hover:from-slate-500 hover:to-slate-600 transition-all transform hover:scale-105 shadow-lg"
             >
               {c.cta.primary}
@@ -218,6 +220,7 @@ export default function DevelopersSMEsService() {
             </Link>
             <Link
               to="/portfolio"
+              onClick={() => trackEvent('cta_click', { label: 'developers_smes_secondary' })}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-slate-200 bg-slate-800 rounded-lg hover:bg-slate-700 transition-all border border-slate-600 shadow-md"
             >
               {c.cta.secondary}

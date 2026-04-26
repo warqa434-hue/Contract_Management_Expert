@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { trackEvent } from '../../lib/analytics';
 import { Scale, CheckCircle2, ArrowRight, FileText, Calculator, MessageSquare, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SEOHead from '../../components/SEOHead';
@@ -223,6 +224,7 @@ export default function ClaimsVariationsService() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
+              onClick={() => trackEvent('cta_click', { label: 'claims_variations_primary' })}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100 transition-all transform hover:scale-105 shadow-lg"
             >
               {c.cta.primary}
@@ -230,6 +232,7 @@ export default function ClaimsVariationsService() {
             </Link>
             <Link
               to="/portfolio"
+              onClick={() => trackEvent('cta_click', { label: 'claims_variations_secondary' })}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-slate-700 rounded-lg hover:bg-slate-600 transition-all transform hover:scale-105 shadow-lg border border-slate-600"
             >
               {c.cta.secondary}
