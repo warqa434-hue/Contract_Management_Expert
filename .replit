@@ -46,3 +46,8 @@ externalPort = 3000
 [postMerge]
 path = "scripts/post-merge.sh"
 timeoutMs = 20000
+
+[userenv]
+
+[userenv.shared]
+VITE_GA_MEASUREMENT_ID = "G-W3FKSK660X"

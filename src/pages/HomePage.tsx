@@ -209,7 +209,7 @@ export default function HomePage() {
               width={2752}
               height={1536}
               className="w-full h-full object-cover opacity-75"
-              fetchPriority="high"
+              fetchpriority="high"
               decoding="async"
             />
           </picture>
