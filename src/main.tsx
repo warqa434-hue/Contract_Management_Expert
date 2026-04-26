@@ -4,6 +4,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import App from './App.tsx';
 import './index.css';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { initGA } from './lib/analytics';
+
+initGA();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

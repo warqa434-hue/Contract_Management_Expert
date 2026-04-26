@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -12,10 +13,20 @@ import PropertyHandoverService from './pages/HOWWEPROTECTYOU/PropertyHandoverSer
 import PortfolioPage from './pages/PortfolioPage';
 import HowWeWorkPage from './pages/HowWeWorkPage';
 import ContactPage from './pages/ContactPage';
+import { trackPageView } from './lib/analytics';
+
+function RouteTracker() {
+  const location = useLocation();
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location]);
+  return null;
+}
 
 function App() {
   return (
     <BrowserRouter>
+      <RouteTracker />
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
