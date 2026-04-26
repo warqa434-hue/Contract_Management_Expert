@@ -105,19 +105,6 @@ const FAQ_CONTENT = {
   },
 };
 
-const FAQ_JSON_LD = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQ_CONTENT.en.items.map((item) => ({
-    '@type': 'Question',
-    name: item.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.a,
-    },
-  })),
-};
-
 export default function HomePage() {
   const { t, dir, language } = useLanguage();
 
@@ -136,6 +123,20 @@ export default function HomePage() {
   const s = seo[language];
   const faq = FAQ_CONTENT[language];
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: language === 'ar' ? 'ar' : 'en',
+    mainEntity: faq.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  };
 
   const whatsappUrl = `https://wa.me/971569001888?text=${encodeURIComponent(t.home.whatsappPrefill)}`;
 
@@ -196,7 +197,7 @@ export default function HomePage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSON_LD) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <section className="relative bg-slate-900 text-white overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
