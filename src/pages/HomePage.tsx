@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from '../components/SEOHead';
-import { trackEvent } from '../lib/analytics';
+import { trackEvent, trackWhatsAppClick, buildWhatsAppTrackingUrl } from '../lib/analytics';
 
 const JSON_LD = {
   '@context': 'https://schema.org',
@@ -230,11 +230,11 @@ export default function HomePage() {
 
           <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 ${dir === 'rtl' ? 'sm:flex-row-reverse' : ''}`}>
             <a
-              href={whatsappUrl}
+              href={buildWhatsAppTrackingUrl(whatsappUrl, 'hero', language)}
               target="_blank"
               rel="noopener noreferrer"
               data-testid="button-hero-whatsapp"
-              onClick={() => trackEvent('whatsapp_click', { label: 'hero', language })}
+              onClick={() => trackWhatsAppClick('hero', { language })}
               className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg w-full sm:w-auto"
             >
               <MessageCircle size={22} />
@@ -320,11 +320,11 @@ export default function HomePage() {
 
           <div className="text-center">
             <a
-              href={whatsappUrl}
+              href={buildWhatsAppTrackingUrl(whatsappUrl, 'solution', language)}
               target="_blank"
               rel="noopener noreferrer"
               data-testid="button-solution-whatsapp"
-              onClick={() => trackEvent('whatsapp_click', { label: 'solution', language })}
+              onClick={() => trackWhatsAppClick('solution', { language })}
               className="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg"
             >
               <MessageCircle size={20} />
@@ -346,11 +346,11 @@ export default function HomePage() {
             {t.home.mortgage.line2}
           </p>
           <a
-            href={whatsappUrl}
+            href={buildWhatsAppTrackingUrl(whatsappUrl, 'mortgage_section', language)}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="button-mortgage-whatsapp"
-            onClick={() => trackEvent('whatsapp_click', { label: 'mortgage_section', language })}
+            onClick={() => trackWhatsAppClick('mortgage_section', { language })}
             className="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg"
           >
             <MessageCircle size={20} />
@@ -485,11 +485,11 @@ export default function HomePage() {
             </p>
             <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 ${dir === 'rtl' ? 'sm:flex-row-reverse' : ''}`}>
               <a
-                href={whatsappUrl}
+                href={buildWhatsAppTrackingUrl(whatsappUrl, 'final_cta', language)}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="button-final-whatsapp"
-                onClick={() => trackEvent('whatsapp_click', { label: 'final_cta', language })}
+                onClick={() => trackWhatsAppClick('final_cta', { language })}
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg w-full sm:w-auto"
               >
                 <MessageCircle size={20} />
