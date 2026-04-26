@@ -31,3 +31,11 @@ export function trackPageView(path: string): void {
     send_to: GA_ID,
   });
 }
+
+export function trackEvent(
+  eventName: string,
+  params: Record<string, string | number | boolean> = {}
+): void {
+  if (!GA_ID || typeof window.gtag !== 'function') return;
+  window.gtag('event', eventName, { send_to: GA_ID, ...params });
+}

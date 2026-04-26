@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from '../components/SEOHead';
+import { trackEvent } from '../lib/analytics';
 
 const JSON_LD = {
   '@context': 'https://schema.org',
@@ -233,6 +234,7 @@ export default function HomePage() {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="button-hero-whatsapp"
+              onClick={() => trackEvent('whatsapp_click', { label: 'hero', language })}
               className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg w-full sm:w-auto"
             >
               <MessageCircle size={22} />
@@ -321,6 +323,7 @@ export default function HomePage() {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="button-solution-whatsapp"
+              onClick={() => trackEvent('whatsapp_click', { label: 'solution', language })}
               className="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg"
             >
               <MessageCircle size={20} />
@@ -346,6 +349,7 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
             data-testid="button-mortgage-whatsapp"
+            onClick={() => trackEvent('whatsapp_click', { label: 'mortgage_section', language })}
             className="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg"
           >
             <MessageCircle size={20} />
@@ -483,6 +487,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="button-final-whatsapp"
+                onClick={() => trackEvent('whatsapp_click', { label: 'final_cta', language })}
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-white bg-green-600 rounded-xl hover:bg-green-500 transition-all shadow-lg w-full sm:w-auto"
               >
                 <MessageCircle size={20} />

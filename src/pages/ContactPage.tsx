@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { getSupabase } from '../lib/supabase';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from '../components/SEOHead';
+import { trackEvent } from '../lib/analytics';
 
 export default function ContactPage() {
   const { t, dir, language } = useLanguage();
@@ -74,6 +75,11 @@ export default function ContactPage() {
 
       if (error) throw error;
 
+      trackEvent('contact_form_submit', {
+        service_needed: formData.service_needed || 'unspecified',
+        client_type: formData.client_type || 'unspecified',
+        language,
+      });
       setStatus('success');
       setFormData({
         name: '',
