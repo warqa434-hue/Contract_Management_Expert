@@ -201,11 +201,18 @@ export default function HomePage() {
       />
       <section className="relative bg-slate-900 text-white overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
-          <img
-            src="/elitefix-hero-001.jpg"
-            alt={t.home.hero.title}
-            className="w-full h-full object-cover opacity-75"
-          />
+          <picture>
+            <source srcSet="/elitefix-hero-001.webp" type="image/webp" />
+            <img
+              src="/elitefix-hero-001.jpg"
+              alt={t.home.hero.title}
+              width={2752}
+              height={1536}
+              className="w-full h-full object-cover opacity-75"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/65 to-slate-900/90" />
         </div>
 
