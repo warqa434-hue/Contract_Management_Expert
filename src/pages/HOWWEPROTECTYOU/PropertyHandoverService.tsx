@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom';
 import { Key, CheckCircle2, AlertTriangle, ArrowRight, Clock, HeartPulse, Shield } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import SEOHead from '../../components/SEOHead';
 
 export default function PropertyHandoverService() {
   const { dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'Expert Property Handover Management | UAE',
+      description:
+        'Professional property handover inspection and snagging for UAE residential projects. Ensure your property meets contract standards before you take the keys.',
+    },
+    ar: {
+      title: 'إدارة تسليم العقارات بشكل احترافي في الإمارات',
+      description:
+        'فحص احترافي لتسليم العقارات والعيوب في المشاريع السكنية بالإمارات. تأكد من أن عقارك يستوفي معايير العقد قبل استلام المفاتيح.',
+    },
+  };
+  const s = seo[language];
 
   const content = {
     en: {
@@ -105,6 +120,7 @@ export default function PropertyHandoverService() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/HOWWEPROTECTYOU/property-handover" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-6">

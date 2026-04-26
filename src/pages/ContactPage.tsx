@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, CheckCircle2, AlertCircle } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import { getSupabase } from '../lib/supabase';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 export default function ContactPage() {
   const { t, dir, language } = useLanguage();
@@ -119,8 +120,23 @@ export default function ContactPage() {
     },
   ];
 
+  const seo = {
+    en: {
+      title: 'Contact BCX – Book a Free Construction Contract Consultation',
+      description:
+        'Get in touch with BCX for a free 60-minute construction contract consultation. Based in Dubai, serving homeowners and developers across the UAE.',
+    },
+    ar: {
+      title: 'تواصل مع BCX – احجز استشارة مجانية لعقود البناء',
+      description:
+        'تواصل مع BCX للحصول على استشارة مجانية مدتها 60 دقيقة في عقود البناء. مقرنا في دبي ونخدم أصحاب المنازل والمطورين في جميع أنحاء الإمارات.',
+    },
+  };
+  const s = seo[language];
+
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/contact" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">{t.contact.title}</h1>

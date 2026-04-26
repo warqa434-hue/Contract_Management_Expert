@@ -1,8 +1,23 @@
 import { Award, MapPin, Target } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 export default function AboutPage() {
-  const { t, dir } = useLanguage();
+  const { t, dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'About BCX – UAE Building Contract Expert',
+      description:
+        'BCX is led by a former UAE government expert with over 20 years in construction contracts, claims management, and dispute resolution across the UAE.',
+    },
+    ar: {
+      title: 'عن BCX – خبير عقود البناء في الإمارات',
+      description:
+        'BCX بقيادة خبير حكومي إماراتي سابق يمتلك أكثر من 20 عامًا في عقود البناء وإدارة المطالبات وحل النزاعات عبر الإمارات.',
+    },
+  };
+  const s = seo[language];
 
   const stats = [
     { icon: Award, label: t.about.profile.experience },
@@ -12,6 +27,7 @@ export default function AboutPage() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/about" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">{t.about.title}</h1>

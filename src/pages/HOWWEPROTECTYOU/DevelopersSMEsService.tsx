@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom';
 import { Building2, CheckCircle2, ArrowRight, TrendingDown, Users, FileWarning, ClipboardCheck } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import SEOHead from '../../components/SEOHead';
 
 export default function DevelopersSMEsService() {
   const { dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'Contract & Tender Review for Developers | UAE',
+      description:
+        'Pre-award and post-award contract review for UAE developers and SMEs. BCX identifies risk allocations, ambiguous clauses, and cost exposures before you commit.',
+    },
+    ar: {
+      title: 'مراجعة العقود والمناقصات للمطورين وأصحاب المشاريع في الإمارات',
+      description:
+        'مراجعة العقود قبل وبعد الترسية للمطورين وأصحاب المشاريع في الإمارات. نحدد توزيع المخاطر والبنود الغامضة والتكاليف المخفية قبل الالتزام.',
+    },
+  };
+  const s = seo[language];
 
   const content = {
     en: {
@@ -115,6 +130,7 @@ export default function DevelopersSMEsService() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/HOWWEPROTECTYOU/developers-smes" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-6">

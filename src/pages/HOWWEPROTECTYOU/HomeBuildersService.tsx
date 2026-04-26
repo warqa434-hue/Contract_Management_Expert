@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom';
 import { FileText, CheckCircle2, AlertTriangle, ArrowRight, Shield, Eye, FileCheck } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import SEOHead from '../../components/SEOHead';
 
 export default function HomeBuildersService() {
   const { dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'Contract Review for Home Builders & Villa Owners | UAE',
+      description:
+        'Expert review of your UAE home-building contract before you sign. BCX identifies hidden costs, risky clauses, and BOQ gaps to protect your investment.',
+    },
+    ar: {
+      title: 'مراجعة العقود لأصحاب الفلل والملاك الأفراد في الإمارات',
+      description:
+        'مراجعة احترافية لعقد بناء منزلك في الإمارات قبل التوقيع. نحدد التكاليف الخفية والبنود الخطرة وثغرات جداول الكميات لحماية استثمارك.',
+    },
+  };
+  const s = seo[language];
 
   const content = {
     en: {
@@ -109,6 +124,7 @@ export default function HomeBuildersService() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/HOWWEPROTECTYOU/home-builders" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-6">

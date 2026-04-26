@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom';
 import { Building2, Home, Hotel, ShoppingBag, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 export default function PortfolioPage() {
-  const { t, dir } = useLanguage();
+  const { t, dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'Project Portfolio – UAE Construction Contract Success Stories',
+      description:
+        'Real-world examples of how BCX has protected UAE clients from contract disputes, recovered project costs, and optimised construction budgets across Dubai and the UAE.',
+    },
+    ar: {
+      title: 'معرض المشاريع – قصص نجاح عقود البناء في الإمارات',
+      description:
+        'أمثلة حقيقية عن كيفية حماية BCX للعملاء في الإمارات من نزاعات العقود واسترداد تكاليف المشاريع وتحسين ميزانيات البناء.',
+    },
+  };
+  const s = seo[language];
 
   const projects = [
     {
@@ -71,6 +86,7 @@ export default function PortfolioPage() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/portfolio" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">{t.portfolio.title}</h1>

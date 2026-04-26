@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom';
 import { FileText, Building2, ClipboardCheck, Scale, Key, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 export default function HOWWEPROTECTYOUPage() {
-  const { t, dir } = useLanguage();
+  const { t, dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'Our Services – Construction Contract & Project Protection',
+      description:
+        "Explore BCX's full range of UAE services: contract review, claims management, project oversight, value engineering, and property handover for homeowners and developers.",
+    },
+    ar: {
+      title: 'خدماتنا – حماية عقود ومشاريع البناء في الإمارات',
+      description:
+        'اكتشف خدمات BCX الشاملة: مراجعة العقود، وإدارة المطالبات، والإشراف على المشاريع، وهندسة القيمة، وتسليم العقارات لأصحاب المنازل والمطورين في الإمارات.',
+    },
+  };
+  const s = seo[language];
 
   const services = [
     {
@@ -52,6 +67,7 @@ export default function HOWWEPROTECTYOUPage() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/HOWWEPROTECTYOU" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">{t.HOWWEPROTECTYOU.title}</h1>

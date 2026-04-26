@@ -10,9 +10,52 @@ import {
   MessageCircle,
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
+
+const JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'BCX – Building Contract Expert',
+  url: 'https://bcx.ae',
+  logo: 'https://bcx.ae/favicon.svg',
+  telephone: '+971569001888',
+  email: 'info@bcx.ae',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Dubai',
+    addressCountry: 'AE',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United Arab Emirates',
+  },
+  serviceType: [
+    'Construction Contract Review',
+    'Contract Claims Management',
+    'Value Engineering',
+    'Project Management',
+    'Property Handover Inspection',
+  ],
+  sameAs: ['https://www.instagram.com/bcx.ae'],
+  priceRange: 'Contact for pricing',
+};
 
 export default function HomePage() {
-  const { t, dir } = useLanguage();
+  const { t, dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'UAE Construction Contract Review – Protect Your Investment',
+      description:
+        "Don't sign your construction contract without a professional review. BCX helps UAE homeowners and developers identify hidden risks, protect their budgets, and avoid costly disputes.",
+    },
+    ar: {
+      title: 'مراجعة عقود البناء في الإمارات – احمِ استثمارك',
+      description:
+        'لا توقع عقد البناء دون مراجعة احترافية. نحمي أصحاب المنازل والمطورين في الإمارات من المخاطر الخفية والنزاعات المكلفة.',
+    },
+  };
+  const s = seo[language];
 
   const whatsappUrl = `https://wa.me/971569001888?text=${encodeURIComponent(t.home.whatsappPrefill)}`;
 
@@ -66,6 +109,11 @@ export default function HomePage() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/" lang={language} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
       <section className="relative bg-slate-900 text-white overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
           <img

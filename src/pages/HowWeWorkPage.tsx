@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom';
 import { MessageSquare, FileSearch, FileText, CheckCircle2, ArrowRight, Shield, Target, Users, Clock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 export default function HowWeWorkPage() {
-  const { t, dir } = useLanguage();
+  const { t, dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'How BCX Works – Our Contract Review Process',
+      description:
+        'A transparent, step-by-step overview of how BCX reviews your UAE construction contracts, identifies risks, and supports you from review to resolution.',
+    },
+    ar: {
+      title: 'كيف يعمل BCX – عملية مراجعة العقود لدينا',
+      description:
+        'نظرة شفافة خطوة بخطوة على كيفية مراجعة BCX لعقود البناء في الإمارات وتحديد المخاطر ودعمك من المراجعة إلى الحل.',
+    },
+  };
+  const s = seo[language];
   const process = [
     {
       icon: MessageSquare,
@@ -75,6 +90,7 @@ export default function HowWeWorkPage() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/how-we-work" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">{t.howWeWork.title}</h1>

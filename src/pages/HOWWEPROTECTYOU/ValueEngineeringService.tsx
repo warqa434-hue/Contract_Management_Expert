@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom';
 import { TrendingDown, CheckCircle2, ArrowRight, BarChart3, Zap, Target, DollarSign } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import SEOHead from '../../components/SEOHead';
 
 export default function ValueEngineeringService() {
   const { dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'Value Engineering & Cost Optimization | UAE Construction',
+      description:
+        'Unlock 15–25% cost savings on your UAE construction project without compromising quality. BCX provides expert value engineering, BOQ optimization, and contract restructuring.',
+    },
+    ar: {
+      title: 'هندسة القيمة وتحسين التكاليف في مشاريع البناء بالإمارات',
+      description:
+        'حقق وفورات 15-25٪ في تكاليف مشروع البناء في الإمارات دون المساس بالجودة. BCX يقدم هندسة القيمة وتحسين جداول الكميات وإعادة هيكلة العقود.',
+    },
+  };
+  const s = seo[language];
 
   const content = {
     en: {
@@ -113,6 +128,7 @@ export default function ValueEngineeringService() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/HOWWEPROTECTYOU/value-engineering" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-6">

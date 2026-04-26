@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom';
 import { Scale, CheckCircle2, ArrowRight, FileText, Calculator, MessageSquare, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import SEOHead from '../../components/SEOHead';
 
 export default function ClaimsVariationsService() {
   const { dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'Construction Claims & Variations Management | UAE',
+      description:
+        'Expert preparation and management of construction claims and variations in the UAE. Protect your entitlements and resolve disputes before they escalate.',
+    },
+    ar: {
+      title: 'إدارة المطالبات والتغييرات في البناء بالإمارات',
+      description:
+        'إعداد وإدارة متخصصة للمطالبات والتغييرات في عقود البناء بالإمارات. احمِ حقوقك وحل النزاعات قبل أن تتصاعد.',
+    },
+  };
+  const s = seo[language];
 
   const content = {
     en: {
@@ -119,6 +134,7 @@ export default function ClaimsVariationsService() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/HOWWEPROTECTYOU/claims-variations" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-6">

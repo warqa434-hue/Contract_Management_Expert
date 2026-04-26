@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom';
 import { ClipboardCheck, CheckCircle2, ArrowRight, Calendar, FileText, Users, Clock } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import SEOHead from '../../components/SEOHead';
 
 export default function ProjectManagementService() {
   const { dir, language } = useLanguage();
+
+  const seo = {
+    en: {
+      title: 'Project & Contract Management Support | UAE Construction',
+      description:
+        'Flexible, part-time project and contract management support for UAE homeowners and developers. Keep your construction project on time and contractually protected.',
+    },
+    ar: {
+      title: 'دعم إدارة المشاريع والعقود في الإمارات',
+      description:
+        'دعم مرن بدوام جزئي لإدارة المشاريع والعقود لأصحاب المنازل والمطورين في الإمارات. حافظ على مشروعك في الموعد ومحمياً تعاقدياً.',
+    },
+  };
+  const s = seo[language];
 
   const content = {
     en: {
@@ -145,6 +160,7 @@ export default function ProjectManagementService() {
 
   return (
     <div>
+      <SEOHead title={s.title} description={s.description} path="/HOWWEPROTECTYOU/project-management" lang={language} />
       <section className="bg-gradient-to-br from-slate-800 to-slate-900 text-white py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-6">
