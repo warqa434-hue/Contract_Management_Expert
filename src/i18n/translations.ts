@@ -15,6 +15,16 @@ export const translations = {
         "Independent contract and project advisory for homeowners and developers in the UAE.",
       copyright: "BCX Building Contract Expert. All rights reserved.",
       location: "Abu Dhabi, UAE",
+      instagram: "Follow us on Instagram",
+    },
+    links: {
+      title: "BCX — Building Contract Expert",
+      subtitle: "Independent Construction Contract Advisory — UAE",
+      bookConsultation: "Book a Free Consultation",
+      whatsappUs: "WhatsApp Us",
+      ourServices: "How We Protect You",
+      aboutBcx: "About BCX",
+      followUs: "Follow @bcx.ae on Instagram",
     },
     common: {
       learnMore: "Learn more",
@@ -504,6 +514,16 @@ export const translations = {
         "استشارات مستقلة في العقود والمشاريع لمالكي المنازل ومطوري المشاريع",
       copyright: "جميع الحقوق محفوظة لشركة BCX لإدارة العقود",
       location: "أبوظبي، الإمارات",
+      instagram: "تابعنا على إنستغرام",
+    },
+    links: {
+      title: "BCX — خبير العقود الإنشائية",
+      subtitle: "استشارات مستقلة لعقود البناء — الإمارات",
+      bookConsultation: "احجز استشارة مجانية",
+      whatsappUs: "تواصل عبر واتساب",
+      ourServices: "كيف نحميك",
+      aboutBcx: "عن BCX",
+      followUs: "تابع @bcx.ae على إنستغرام",
     },
     common: {
       learnMore: "اعرف المزيد",

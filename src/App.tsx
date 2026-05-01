@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -13,22 +13,42 @@ import PropertyHandoverService from './pages/HOWWEPROTECTYOU/PropertyHandoverSer
 import PortfolioPage from './pages/PortfolioPage';
 import HowWeWorkPage from './pages/HowWeWorkPage';
 import ContactPage from './pages/ContactPage';
-import { trackPageView } from './lib/analytics';
+import LinksPage from './pages/LinksPage';
+import { trackPageView, trackUTMParams } from './lib/analytics';
 
 function RouteTracker() {
   const location = useLocation();
+  const utmTracked = useRef(false);
+
   useEffect(() => {
     trackPageView(location.pathname + location.search);
   }, [location]);
+
+  useEffect(() => {
+    if (!utmTracked.current) {
+      trackUTMParams();
+      utmTracked.current = true;
+    }
+  }, []);
+
   return null;
+}
+
+function LayoutWrapper() {
+  return (
+    <Layout>
+      <Outlet />
+    </Layout>
+  );
 }
 
 function App() {
   return (
     <BrowserRouter>
       <RouteTracker />
-      <Layout>
-        <Routes>
+      <Routes>
+        <Route path="/links" element={<LinksPage />} />
+        <Route element={<LayoutWrapper />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/HOWWEPROTECTYOU" element={<HOWWEPROTECTYOUPage />} />
@@ -41,8 +61,8 @@ function App() {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/how-we-work" element={<HowWeWorkPage />} />
           <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-      </Layout>
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

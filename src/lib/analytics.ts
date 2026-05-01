@@ -43,6 +43,21 @@ export function getSessionId(): string {
   return sid;
 }
 
+// Fires a one-time GA4 event capturing UTM parameters from the URL.
+// Called on initial page load so GA4 records which campaign/source drove the visit.
+export function trackUTMParams(): void {
+  const params = new URLSearchParams(window.location.search);
+  const utmSource = params.get('utm_source');
+  if (!utmSource) return;
+  trackEvent('utm_arrival', {
+    utm_source: utmSource,
+    utm_medium: params.get('utm_medium') || '',
+    utm_campaign: params.get('utm_campaign') || '',
+    utm_content: params.get('utm_content') || '',
+    landing_page: window.location.pathname,
+  });
+}
+
 // WhatsApp funnel stages tracked by this module:
 //   whatsapp_click    — user clicked a WhatsApp button (click intent, client GA4)
 //   whatsapp_opened   — user's browser followed /track/whatsapp → 302 → wa.me
