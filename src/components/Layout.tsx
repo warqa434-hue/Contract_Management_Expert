@@ -1,9 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Instagram } from 'lucide-react';
 import { useState } from 'react';
 import FloatingReviewButton from './FloatingReviewButton';
 import LanguageToggle from './LanguageToggle';
 import { useLanguage } from '../contexts/LanguageContext';
+import { trackEvent } from '../lib/analytics';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,8 +26,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-950">
-      <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+    <div className="min-h-screen flex flex-col bg-background selection:bg-brand-500/30">
+      <header className="bg-background/70 backdrop-blur-md border-b border-white/5 sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className={`flex items-center ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-2`}>
@@ -43,8 +44,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   to={item.href}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'bg-slate-700 text-white'
-                      : 'text-slate-400 hover:bg-slate-800 hover:text-slate-100'
+                      ? 'text-white'
+                      : 'text-slate-400 hover:text-white'
                   }`}
                 >
                   {item.name}
@@ -58,7 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <LanguageToggle />
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-md text-slate-400 hover:bg-slate-800"
+                className="p-2 rounded-md text-slate-400 hover:text-white"
               >
                 {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -66,7 +67,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-slate-800">
+            <div className="md:hidden py-4 border-t border-white/5 bg-background">
               <div className="flex flex-col space-y-1">
                 {navigation.map((item) => (
                   <Link
@@ -75,8 +76,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`px-4 py-3 rounded-md text-base font-medium transition-colors ${
                       isActive(item.href)
-                        ? 'bg-slate-700 text-white'
-                        : 'text-slate-400 hover:bg-slate-800 hover:text-slate-100'
+                        ? 'text-white bg-white/5'
+                        : 'text-slate-400 hover:bg-white/5 hover:text-white'
                     }`}
                   >
                     {item.name}
@@ -94,7 +95,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <FloatingReviewButton />
 
-      <footer className="bg-slate-900 border-t border-slate-800 text-white mt-16">
+      <footer className="bg-background border-t border-white/5 text-white mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -137,11 +138,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Phone size={16} className="mt-0.5 flex-shrink-0" />
                   <span dir="ltr">+971 56 900 1888</span>
                 </li>
+                <li className={`flex items-start ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-2`}>
+                  <a
+                    href="https://instagram.com/bcx.ae"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackEvent('instagram_click', { source: 'footer' })}
+                    className={`flex items-center ${dir === 'rtl' ? 'space-x-reverse' : ''} space-x-2 hover:text-white transition-colors`}
+                    title={t.footer.instagram}
+                  >
+                    <Instagram size={16} className="flex-shrink-0" />
+                    <span>{t.footer.instagram}</span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-500">
+          <div className="border-t border-white/5 mt-8 pt-8 text-center text-sm text-slate-500">
             <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
           </div>
         </div>
